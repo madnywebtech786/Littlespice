@@ -24,3 +24,139 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@theme {
+  --color-primary-red: #e53e3e;
+  --color-dark-text: #1a202c;
+  --color-light-background: #f7fafc;
+  --color-white: #ffffff;
+  --color-gray-text: #718096;
+  --color-warm-orange: #ffa500;
+
+  --font-inter: "Inter", sans-serif;
+
+  --text-4xl: 2.25rem;
+  --text-6xl: 3.75rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-sm: 0.875rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --leading-tight: 1.25;
+
+  --radius-sm: 0.5rem; /* 8px */
+  --radius-md: 1rem; /* 16px */
+
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-inter);
+    color: var(--color-dark-text);
+    background-color: var(--color-light-background);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-dark-text);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-tight);
+  }
+
+  p {
+    color: var(--color-gray-text);
+  }
+}
+
+@keyframes scroll-text {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.animate-scroll-text {
+  animation: scroll-text 30s linear infinite;
+}
+
+@keyframes float-1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, -15px);
+  }
+}
+.animate-float-1 {
+  animation: float-1 6s ease-in-out infinite;
+}
+
+@keyframes float-2 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, -15px);
+  }
+}
+.animate-float-2 {
+  animation: float-2 7s ease-in-out infinite;
+}
+
+@keyframes float-3 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, -10px);
+  }
+}
+.animate-float-3 {
+  animation: float-3 5s ease-in-out infinite;
+}
+
+@keyframes float-4 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+}
+.animate-float-4 {
+  animation: float-4 8s ease-in-out infinite;
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-slow-spin {
+  animation: slow-spin 20s linear infinite;
+}
