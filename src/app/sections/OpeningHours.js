@@ -51,7 +51,7 @@ const OpeningHours = () => {
               {scheduleData.map((item, index) => (
                 <div
                   key={index}
-                  className="py-6 border-b-2 border-dashed border-gray-300 last:border-b-0 first:pt-0"
+                  className="py-6 border-b-2 border-dashed border-primary-red last:border-b-0 first:pt-0"
                 >
                   <p className="text-lg font-medium text-gray-800">
                     {item.days}

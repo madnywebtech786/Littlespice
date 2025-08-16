@@ -30,7 +30,7 @@ const timelineData = [
 const HistorySection = () => {
   return (
     <section
-      className="relative bg-cover bg-center py-16 px-4 sm:px-8 md:px-12 lg:px-20"
+      className="relative bg-cover bg-center bg-fixed py-16 px-4 sm:px-8 md:px-12 lg:px-20"
       style={{
         backgroundImage:
           "url('https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/history-main.jpg')",
@@ -43,7 +43,7 @@ const HistorySection = () => {
             Our History
           </p>
           <h2 className="mt-2 text-4xl font-bold text-white md:text-5xl">
-            A History of restaurant
+            A <span className="text-secondary">  History</span> of restaurant
           </h2>
           <Image
             unoptimized

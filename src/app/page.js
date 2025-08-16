@@ -12,11 +12,11 @@ import ChefTeam from "./sections/Chefs";
 import OpeningHours from "./sections/OpeningHours";
 import Testimonials from "./sections/Testimonials";
 import Footer from "./components/Footer";
+import Contact from "./sections/Contact";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <HeroSection />
       <FoodCategories />
       <AboutSection />
@@ -28,7 +28,7 @@ export default function Home() {
       <ChefTeam />
       <OpeningHours />
       <Testimonials />
-      <Footer />
+      <Contact />
     </>
   );
 }

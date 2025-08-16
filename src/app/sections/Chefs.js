@@ -1,35 +1,39 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-
-const chefs= [
+const chefs = [
   {
     name: "Alina Morish",
     title: "Expert Chef",
-    image: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/team_1_1.png",
+    image:
+      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/team_1_1.png",
   },
   {
     name: "Michel Clark",
     title: "Expert Chef",
-    image: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/team_1_2.png",
+    image:
+      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/team_1_2.png",
   },
   {
     name: "Esa Elizabed",
     title: "Expert Chef",
-    image: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/team_1_3.png",
+    image:
+      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/team_1_3.png",
   },
   {
     name: "William Latham",
     title: "Expert Chef",
-    image: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/team_1_4.png",
+    image:
+      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/team_1_4.png",
   },
 ];
 
-const BG_SHAPE_URL = "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/team-1-bg-shape.png";
-const TITLE_SHAPE_URL = "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/title-shape.png";
+const BG_SHAPE_URL =
+  "/images/chef-shadow.png";
+const TITLE_SHAPE_URL = "/images/divider.svg";
 
 const ChefTeam = () => {
   return (
-    <section className="bg-white py-16 px-4 sm:px-8 md:px-12 lg:px-20">
+    <section className="bg-white py-20 px-4 sm:px-8 md:px-12 lg:px-20">
       <div className="mx-auto">
         <div className="text-center mb-16">
           <p className="text-primary-red font-bold uppercase tracking-widest text-sm">
@@ -39,10 +43,10 @@ const ChefTeam = () => {
             Meet Our Expert Chef
           </h2>
           <Image
-unoptimized
+            unoptimized
             src={TITLE_SHAPE_URL}
             alt="title shape"
-            width={125}
+            width={304}
             height={10}
             className="mx-auto mt-6"
           />
@@ -50,20 +54,23 @@ unoptimized
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 justify-items-center">
           {chefs.map((chef, index) => (
-            <div key={index} className="text-center group flex flex-col items-center">
-              <div className="relative inline-block mb-6 w-[280px] h-[280px]">
+            <div
+              key={index}
+              className="text-center group flex flex-col items-center"
+            >
+              <div className="relative inline-block mb-6 w-[280px] h-[280px] chef-shape bg-primary-red">
                 <Image
-unoptimized
+                  unoptimized
                   src={BG_SHAPE_URL}
                   alt="chef background shape"
                   width={280}
                   height={280}
-                  className="transition-transform duration-[2000ms] ease-in-out group-hover:rotate-[360deg]"
+                  className="opacity-25 transition-transform duration-[2000ms] ease-in-out group-hover:rotate-[360deg]"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="overflow-hidden rounded-full">
+                  <div className="overflow-hidden rounded-full ">
                     <Image
-unoptimized
+                      unoptimized
                       src={chef.image}
                       alt={chef.name}
                       width={250}
@@ -74,7 +81,10 @@ unoptimized
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-dark-text mb-1">
-                <a href="#" className="hover:text-primary-red transition-colors duration-300">
+                <a
+                  href="#"
+                  className="hover:text-primary-red transition-colors duration-300"
+                >
                   {chef.name}
                 </a>
               </h3>

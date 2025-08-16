@@ -12,18 +12,33 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { name: "HOME", href: "#", active: true },
-  { name: "ABOUT", href: "#" },
+  { name: "HOME", href: "/", active: true },
+  { name: "ABOUT", href: "/about-us" },
   {
     name: "MENU",
     href: "#",
     dropdown: [
       { name: "Menu Style 1", href: "#" },
-      { name: "Menu Details", href: "#" },
+      {
+        name: "Menu Details",
+        href: "#",
+        dropdown: [
+          { name: "Menu Style A", href: "#" },
+          { name: "Menu Details B", href: "#" },
+        ],
+      },
+      {
+        name: "More Options",
+        href: "#",
+        dropdown: [
+          { name: "Option 1", href: "#" },
+          { name: "Option 2", href: "#" },
+        ],
+      },
+      { name: "Single Link", href: "#" },
     ],
   },
-
-  { name: "CONTACT", href: "#" },
+  { name: "CONTACT", href: "/contact" },
 ];
 
 const Header = () => {
@@ -49,7 +64,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex-shrink-0">
-            <h2 className="text-3xl text-primary-red">Little Spicy</h2>
+            <h2 className="text-3xl text-primary-red">Little Spice</h2>
           </Link>
 
           <nav className="hidden lg:flex items-center">
@@ -67,16 +82,65 @@ const Header = () => {
                       <ChevronDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                     )}
                   </Link>
+
                   {item.dropdown && (
-                    <ul className="absolute left-0 top-full mt-4 w-52 bg-white shadow-lg rounded-md py-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
+                    /* FIRST-LEVEL DROPDOWN */
+                    <ul
+                      className="absolute left-0 top-full mt-4 w-52 bg-white shadow-lg rounded-md py-3
+                       opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                       transition-all duration-300 transform group-hover:translate-y-0 translate-y-2
+                       first-level-dropdown"
+                    >
                       {item.dropdown.map((subItem) => (
-                        <li key={subItem.name}>
+                        /* sub-item is NOT a Tailwind `group` for controlling its submenu */
+                        <li key={subItem.name} className="relative sub-item">
                           <Link
                             href={subItem.href}
-                            className="block px-5 py-2 text-sm text-gray-text hover:bg-light-background hover:text-primary-red"
+                            className="flex items-center justify-between px-5 py-2 text-sm text-gray-text hover:bg-light-background hover:text-primary-red"
+                            aria-haspopup={!!subItem.dropdown}
+                            aria-expanded={
+                              subItem.dropdown ? "false" : undefined
+                            }
                           >
-                            {subItem.name}
+                            <span>{subItem.name}</span>
+
+                            {subItem.dropdown && (
+                              <svg
+                                className="ml-2 h-3 w-3 flex-shrink-0"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden
+                              >
+                                <path
+                                  d="M9 6l6 6-6 6"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            )}
                           </Link>
+
+                          {/* SECOND-LEVEL DROPDOWN — controlled by CSS :hover on .sub-item */}
+                          {subItem.dropdown && (
+                            <ul
+                              className="absolute left-full top-0 ml-2 w-52 bg-white shadow-lg rounded-md py-3
+                               submenu"
+                            >
+                              {subItem.dropdown.map((subSub) => (
+                                <li key={subSub.name}>
+                                  <Link
+                                    href={subSub.href}
+                                    className="block px-5 py-2 text-sm text-gray-text hover:bg-light-background hover:text-primary-red"
+                                  >
+                                    {subSub.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -87,7 +151,6 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-2">
-          
             <Link href="#" className="hidden lg:block ml-4">
               <div
                 className="bg-primary-red text-white font-semibold text-sm py-[14px] px-8 transition-all duration-300 hover:bg-dark-text"

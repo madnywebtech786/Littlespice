@@ -127,14 +127,14 @@ export default function MenuSection() {
         <div className="text-center mb-12 max-w-2xl mx-auto">
           <p className="text-lg font-bold text-primary-red mb-2">Menu Card</p>
           <h2 className="text-4xl md:text-5xl font-extrabold text-dark-text leading-tight">
-            Our Fast Foods Menu Card
+            Our <span className="text-primary-red"> Foods</span> Menu Card
           </h2>
           <Image
             unoptimized
-            src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/title-shape.png"
+            src="/images/divider.svg"
             alt="Title shape"
-            width={100}
-            height={16}
+            width={304}
+            height={10}
             className="mx-auto mt-4"
           />
         </div>
@@ -181,7 +181,7 @@ export default function MenuSection() {
                     height={90}
                     className="flex-shrink-0 rounded-full w-[70px] h-[70px] md:w-[90px] md:h-[90px] object-cover border-2 border-white shadow-sm"
                   />
-                  <div className="flex-grow flex flex-col md:flex-row md:items-baseline">
+                  <div className="flex-grow flex flex-col md:flex-row md:items-center">
                     <div className="flex-grow">
                       <h3 className="text-lg md:text-xl font-bold text-dark-text hover:text-primary-red transition-colors duration-300 cursor-pointer">
                         {item.name}
@@ -190,7 +190,7 @@ export default function MenuSection() {
                         {item.description}
                       </p>
                     </div>
-                    <span className="hidden md:inline-block flex-grow border-b-2 border-dotted border-gray-300 mx-4 mb-2"></span>
+                    <span className="hidden md:inline-block flex-grow border-b-2 border-dotted border-gray-300 mx-4 "></span>
                     <p className="text-lg font-bold text-primary-red flex-shrink-0 mt-2 md:mt-0">
                       {item.price}
                     </p>

@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay,Navigation } from "swiper/modules";
 
 const galleryImages = [
   {
@@ -141,11 +141,11 @@ const CloseIcon = (props) => (
 );
 
 const FoodGallery = () => {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState("");
+     const prevRef = useRef(null);
+    const nextRef = useRef(null);
 
   return (
-    <section className="py-16 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
+    <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
       <div className="mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center mb-12">
           <div className="text-center lg:text-left w-full lg:w-auto">
@@ -157,23 +157,25 @@ const FoodGallery = () => {
             </h2>
             <Image
               unoptimized
-              src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/title-shape.png"
+              src="/images/divider.svg"
               alt="title shape"
-              width={145}
-              height={13}
+              width={200}
+              height={10}
               className="mt-4 mx-auto lg:mx-0"
             />
           </div>
           <div className="hidden lg:flex items-center space-x-3 mt-8 lg:mt-0">
             <button
+              ref={prevRef}
               aria-label="Previous slide"
-              className="w-12 h-12 rounded-full bg-white text-dark-text hover:bg-primary-red hover:text-white transition-all duration-300 flex items-center justify-center shadow-md"
+              className="w-12 h-12 rounded-full bg-primary-red text-white hover:bg-red-700  transition-all duration-300 flex items-center justify-center shadow-md"
             >
               <ArrowLeftIcon />
             </button>
             <button
+              ref={nextRef}
               aria-label="Next slide"
-              className="w-12 h-12 rounded-full bg-white text-dark-text hover:bg-primary-red hover:text-white transition-all duration-300 flex items-center justify-center shadow-md"
+              className="w-12 h-12 rounded-full bg-primary-red text-white hover:bg-red-700  transition-all duration-300 flex items-center justify-center shadow-md"
             >
               <ArrowRightIcon />
             </button>
@@ -183,8 +185,16 @@ const FoodGallery = () => {
           slidesPerView={5}
           spaceBetween={10}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
-          modules={[Autoplay]}
+          modules={[Autoplay, Navigation]}
           loop
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
         >
           {galleryImages.map((item, index) => (
             <SwiperSlide>

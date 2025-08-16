@@ -27,6 +27,7 @@ body {
 
 @theme {
   --color-primary-red: #e53e3e;
+  --color-secondary: #ff9924;
   --color-dark-text: #1a202c;
   --color-light-background: #f7fafc;
   --color-white: #ffffff;
@@ -159,4 +160,57 @@ body {
 }
 .animate-slow-spin {
   animation: slow-spin 20s linear infinite;
+}
+
+.section-shape {
+  -webkit-mask-image: url("/images/3.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-image: url("/images/3.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
+.chef-shape {
+  -webkit-mask-image: url("/images/chefs.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-image: url("/images/chefs.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
+.shape-mask {
+  clip-path: polygon(0px 0px, 100% 0%, 100% 100%, 0px 91%);
+  border-radius: 8px;
+}
+.shape-mask2 {
+  clip-path: polygon(0px 0px, 100% 17%, 100% 100%, 0px 100%);
+  border-radius: 8px;
+}
+
+/* hide all second-level submenus by default (they live inside .first-level-dropdown) */
+.first-level-dropdown .submenu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(8px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  pointer-events: none;
+}
+
+/* show the submenu only when hovering (or keyboard-focusing) that exact sub-item */
+.first-level-dropdown .sub-item:hover > .submenu,
+.first-level-dropdown .sub-item:focus-within > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.breadcrumb {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url("/images/breadcrumb.svg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }

@@ -57,18 +57,18 @@ const SpecialOffer = () => {
   }, []);
 
   return (
-    <section className="relative bg-[#131313] flex flex-col justify-center py-20 lg:py-32 overflow-hidden min-h-[650px]">
+    <section className="relative bg-[#131313] bg-fixed flex flex-col justify-center py-20 lg:py-32 overflow-hidden min-h-[650px]">
       <div className="relative z-10">
         <div className="flex w-full justify-center items-center">
           <div className="text-center w-10/12">
             <div className="relative inline-block mb-6">
-              <h5 className=" flex items-center justify-center text-primary-red uppercase font-bold text-sm sm:text-base tracking-wider animate-pulse">
+              <h5 className=" flex items-center justify-center text-secondary uppercase font-bold text-sm sm:text-base tracking-wider animate-pulse">
                 save up to 50% off
               </h5>
             </div>
 
             <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight">
-              Super Delicious Burger
+              Super <span className="text-secondary"> Delicious </span> Burger
             </h2>
 
             <p className="text-lg text-white/80 mt-4 font-medium">
@@ -101,27 +101,7 @@ const SpecialOffer = () => {
         height={695}
         className="w-4/5 h-auto absolute top-10 -right-1/2"
       />
-      <div className="absolute top-0 left-0 w-full h-auto opacity-20 animate-smoke">
-        <Image
-          unoptimized
-          src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/shape-top-smoke.png"
-          alt="smoke effect"
-          width={1920}
-          height={439}
-          className="w-full h-auto"
-        />
-      </div>
-
-      <div className="absolute bottom-0 left-0 w-full h-auto opacity-20 animate-smoke-reverse">
-        <Image
-          unoptimized
-          src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/shape-top-smoke.png"
-          alt="smoke effect bottom"
-          width={1920}
-          height={439}
-          className="w-full h-auto transform scale-y-[-1]"
-        />
-      </div>
+  
     </section>
   );
 };

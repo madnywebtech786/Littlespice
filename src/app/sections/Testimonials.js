@@ -97,14 +97,14 @@ export default function Testimonials() {
             Testimonials
           </p>
           <h2 className="text-dark-text text-3xl md:text-4xl lg:text-5xl font-bold mt-2">
-            Our Customers Feedback
+            Our <span className="text-primary-red"> Happy  </span> Customers Feedback
           </h2>
           <Image
             unoptimized
-            src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/title-shape.png"
+            src="/images/divider.svg"
             alt="Title Shape"
-            width={126}
-            height={13}
+            width={304}
+            height={10}
             className="mx-auto mt-4"
           />
         </div>
