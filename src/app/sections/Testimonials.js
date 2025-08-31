@@ -68,7 +68,7 @@ export default function Testimonials() {
     <section className="relative bg-white py-20 lg:py-28 overflow-hidden">
       <Image
         unoptimized
-        src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/testi-top-1-1.png"
+        src="/images/menu/gobi-pakora.png"
         alt="Decorative Shape"
         width={193}
         height={175}
@@ -76,7 +76,7 @@ export default function Testimonials() {
       />
       <Image
         unoptimized
-        src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/testi-top-1-2.png"
+        src="/images/menu/papri-chat.png"
         alt="Decorative Shape"
         width={196}
         height={192}
@@ -84,10 +84,10 @@ export default function Testimonials() {
       />
       <Image
         unoptimized
-        src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/hero-1-3.png"
+        src="/images/menu/kheer.png"
         alt="Decorative Chili"
-        width={76}
-        height={85}
+        width={100}
+        height={100}
         className="absolute bottom-[10%] left-[5%] hidden lg:block"
       />
 

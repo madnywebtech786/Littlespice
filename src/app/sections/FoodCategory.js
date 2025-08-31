@@ -5,114 +5,91 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay,Navigation  } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 const categories = [
   {
-    name: "Craft Pizza",
+    name: "Samosa",
     items: 25,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-1.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/samosa.png",
     href: "#",
   },
   {
-    name: "Grilled Chicken",
+    name: "Desi",
     items: 22,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-2.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/biryani.png",
     href: "#",
   },
   {
-    name: "Gourmet Burgers",
+    name: "Pakora",
     items: 23,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-3.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/pakora.png",
     href: "#",
   },
   {
-    name: "Meal Boxes",
+    name: "Shakes",
     items: 22,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-4.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/oreo-shake.png",
     href: "#",
   },
   {
-    name: "Fried Chicken",
+    name: "Tea",
     items: 25,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-5.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/karak-tea.png",
     href: "#",
   },
   {
-    name: "Food Combos",
+    name: "Deserts",
     items: 25,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-6.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/choclate-lava-cake.png",
     href: "#",
   },
   {
-    name: "Craft Pizza",
+    name: "Samosa",
     items: 25,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-1.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/samosa.png",
     href: "#",
   },
   {
-    name: "Grilled Chicken",
+    name: "Desi",
     items: 22,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-2.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/biryani.png",
     href: "#",
   },
   {
-    name: "Gourmet Burgers",
+    name: "Pakora",
     items: 23,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-3.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/pakora.png",
     href: "#",
   },
   {
-    name: "Meal Boxes",
+    name: "Shakes",
     items: 22,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-4.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/oreo-shake.png",
     href: "#",
   },
   {
-    name: "Fried Chicken",
+    name: "Tea",
     items: 25,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-5.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/karak-tea.png",
     href: "#",
   },
   {
-    name: "Food Combos",
+    name: "Deserts",
     items: 25,
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/category_1-6.png",
-    shadowImage: "/images/menuBottom2.svg",
+    image: "/images/menu/choclate-lava-cake.png",
     href: "#",
   },
 ];
 
 const FoodCategories = () => {
-   const prevRef = useRef(null);
+  const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const shadowImg = "/images/menuBottom2.svg";
 
   return (
     <section className="bg-[#FFFBF2] py-16 px-4 sm:px-8 md:px-12 lg:px-20">
-      <div className="container mx-auto px-4">
+      <div className="">
         <div className="relative mb-12">
           <div className="text-center">
             <span className="text-primary-red font-bold text-sm tracking-widest uppercase">
@@ -150,20 +127,23 @@ const FoodCategories = () => {
           </div>
         </div>
         <Swiper
-          slidesPerView={6}
+          slidesPerView={2}
           spaceBetween={10}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          modules={[Autoplay,Navigation]}
+          modules={[Autoplay, Navigation]}
           loop
           navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-          
-        }}
-         onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-        }}
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
+          breakpoints={{
+            768: { slidesPerView: 3, spaceBetween: 10 },
+            1024: { slidesPerView: 6, spaceBetween: 10 },
+          }}
         >
           {categories.map((category, index) => (
             <SwiperSlide>
@@ -193,7 +173,7 @@ const FoodCategories = () => {
               </div>
               <Image
                 unoptimized
-                src={category.shadowImage}
+                src={shadowImg}
                 alt=""
                 width={420}
                 height={300}

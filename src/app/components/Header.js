@@ -14,30 +14,31 @@ import {
 const navItems = [
   { name: "HOME", href: "/", active: true },
   { name: "ABOUT", href: "/about-us" },
-  {
-    name: "MENU",
-    href: "#",
-    dropdown: [
-      { name: "Menu Style 1", href: "#" },
-      {
-        name: "Menu Details",
-        href: "#",
-        dropdown: [
-          { name: "Menu Style A", href: "#" },
-          { name: "Menu Details B", href: "#" },
-        ],
-      },
-      {
-        name: "More Options",
-        href: "#",
-        dropdown: [
-          { name: "Option 1", href: "#" },
-          { name: "Option 2", href: "#" },
-        ],
-      },
-      { name: "Single Link", href: "#" },
-    ],
-  },
+  { name: "MENU", href: "/menu" },
+  // {
+  //   name: "MENU",
+  //   href: "#",
+  //   dropdown: [
+  //     { name: "Menu Style 1", href: "#" },
+  //     {
+  //       name: "Menu Details",
+  //       href: "#",
+  //       dropdown: [
+  //         { name: "Menu Style A", href: "#" },
+  //         { name: "Menu Details B", href: "#" },
+  //       ],
+  //     },
+  //     {
+  //       name: "More Options",
+  //       href: "#",
+  //       dropdown: [
+  //         { name: "Option 1", href: "#" },
+  //         { name: "Option 2", href: "#" },
+  //       ],
+  //     },
+  //     { name: "Single Link", href: "#" },
+  //   ],
+  // },
   { name: "CONTACT", href: "/contact" },
 ];
 
@@ -185,6 +186,7 @@ const Header = () => {
                   <Link
                     href={item.href}
                     className="flex justify-between items-center px-6 py-3 text-sm font-medium uppercase hover:text-primary-red transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                     {item.dropdown && <ChevronDown className="h-4 w-4" />}
@@ -194,7 +196,7 @@ const Header = () => {
               ))}
             </ul>
             <div className="px-6 py-4">
-              <Link href="#">
+              <Link href="#" onClick={() => setIsMenuOpen(false)}>
                 <div
                   className="bg-primary-red text-white font-semibold text-sm py-[14px] px-8 w-full text-center"
                   style={{

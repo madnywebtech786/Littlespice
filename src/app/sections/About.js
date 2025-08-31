@@ -24,21 +24,13 @@ const AboutSection = () => {
           <div className="relative">
             <Image
               unoptimized
-              src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/about_1_1.png"
+              src="/images/about-side.png"
               alt="A delicious-looking plate of fast food including a burger and fries"
               width={590}
               height={580}
               className="w-full h-auto rounded-lg relative z-10"
             />
-            <Image
-              unoptimized
-              src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/about-shape-1.2.png"
-              alt=""
-              width={544}
-              height={531}
-              className="absolute -bottom-8 -left-8 z-0 hidden lg:block"
-              aria-hidden="true"
-            />
+    
           </div>
           <div className="relative z-10">
             <span className="text-primary-red font-bold uppercase tracking-[0.1em] text-sm">

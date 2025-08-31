@@ -3,110 +3,201 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
-
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 const menuItems = [
+  // 🥟 Samosa
   {
     id: 1,
-    name: "Grill Chicken Pizza",
-    description: "Candied Jerusalem artichokes, truffle",
-    price: "$30.99",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_14-150x150.png",
-    category: "Pizza",
+    name: "Samosa",
+    description: "Crispy fried pastry stuffed with spiced potatoes and peas.",
+    price: "$3.50",
+    image: "/images/menu/samosa.png",
+    category: "Samosa",
   },
   {
     id: 2,
-    name: "Smoked Salmon Bagel",
-    description: "Smoky Pepperoni, Melting Cheese",
-    price: "$39.85",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_1-150x150.png",
-    category: "Burger",
+    name: "Samosa Chat",
+    description: "Crispy samosa topped with yogurt, chutneys & spices.",
+    price: "$5.99",
+    image: "/images/menu/samosa-chat.png",
+    category: "Samosa",
   },
+
+  // 🍛 Desi
   {
     id: 3,
-    name: "Bacon Italian Pizza",
-    description: "Spicy Jalapeño, Creamy Ranch",
-    price: "$20.99",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_4-150x150.png",
-    category: "Pizza",
+    name: "Biryani",
+    description: "Fragrant basmati rice layered with spiced meat & herbs.",
+    price: "$12.99",
+    image: "/images/menu/biryani.png",
+    category: "Desi",
   },
   {
     id: 4,
-    name: "Delicious Pizza",
-    description: "Spicy Jalapeño, Creamy Ranch",
-    price: "$40.99",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_7-150x150.png",
-    category: "Pizza",
+    name: "Nihari",
+    description: "Slow-cooked beef stew in rich spices.",
+    price: "$13.99",
+    image: "/images/menu/nihari.png",
+    category: "Desi",
   },
   {
     id: 5,
-    name: "Delicious Pizza",
-    description: "Truffle Mushroom, Garlic Butter",
-    price: "$32.85",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_9-150x150.png",
-    category: "Pizza",
+    name: "Papri Chat",
+    description: "Crispy wafers, potatoes, chickpeas & yogurt chutney.",
+    price: "$6.99",
+    image: "/images/menu/papri-chat.png",
+    category: "Desi",
   },
   {
     id: 6,
-    name: "Combo: Solo Snack Pack",
-    description: "1 Personal Pizza + Fries + 1 Drinks",
-    price: "$232.85",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_10-150x150.png",
-    category: "Combo",
+    name: "Haleem",
+    description: "Wheat, lentils & meat cooked into a savory porridge.",
+    price: "$11.99",
+    image: "/images/menu/haleem.png",
+    category: "Desi",
   },
   {
     id: 7,
-    name: "Combo: Family Feast",
-    description: "2 Medium Pizza + 2 Side + 1 Dessert + 4 Soft Drinks",
-    price: "$60.00",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_11-150x150.png",
-    category: "Combo",
+    name: "Daal Makhni",
+    description: "Creamy black lentils simmered with butter & cream.",
+    price: "$10.99",
+    image: "/images/menu/daal-makhni.png",
+    category: "Desi",
   },
   {
     id: 8,
-    name: "Fry Chicken Ball",
-    description: "At the heart of our kitchen are bold flavors",
-    price: "$177.85",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_3-150x150.png",
-    category: "Chicken",
+    name: "Coconut Curry",
+    description: "Aromatic curry made with coconut milk & spices.",
+    price: "$11.50",
+    image: "/images/menu/coconut-curry.png",
+    category: "Desi",
   },
   {
     id: 9,
-    name: "Delicious Black Burger",
-    description: "The soul of our kitchen: bold ingredients",
-    price: "$30.99",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_5-150x150.png",
-    category: "Burger",
+    name: "Dahi Bhaly",
+    description: "Soft lentil dumplings topped with yogurt & chutneys.",
+    price: "$5.50",
+    image: "/images/menu/dahi-bhaly.png",
+    category: "Desi",
   },
+
+  // 🥟 Pakora
   {
     id: 10,
-    name: "Solo Snack Pack",
-    description: "Our kitchen thrives on premium ingredients",
-    price: "$30.00",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_6-150x150.png",
-    category: "Combo",
+    name: "Bread Pakora",
+    description: "Stuffed bread slices dipped in gram flour batter & fried.",
+    price: "$4.99",
+    image: "/images/menu/bread-pakora.png",
+    category: "Pakora",
   },
   {
     id: 11,
-    name: "Grill Chicken Fry",
-    description: "Sweet Pineapple, Tangy Ham",
-    price: "$16.85",
-    image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_details_1_1-150x150.png",
-    category: "Chicken",
+    name: "Gobi Pakora",
+    description: "Cauliflower florets deep fried in spiced gram flour batter.",
+    price: "$5.50",
+    image: "/images/menu/gobi-pakora.png",
+    category: "Pakora",
+  },
+  {
+    id: 12,
+    name: "Fish Pakora",
+    description: "Fish pieces coated in spiced batter & fried till crispy.",
+    price: "$8.99",
+    image: "/images/menu/fish-pakora.png",
+    category: "Pakora",
+  },
+  {
+    id: 13,
+    name: "Pakora",
+    description: "Classic mixed vegetable fritters fried golden brown.",
+    price: "$4.50",
+    image: "/images/menu/pakora.png",
+    category: "Pakora",
+  },
+
+  // 🥤 Shakes
+  {
+    id: 14,
+    name: "Mango Shake",
+    description: "Refreshing mango shake made with fresh mangoes & milk.",
+    price: "$6.50",
+    image: "/images/menu/mango-shake.png",
+    category: "Shakes",
+  },
+  {
+    id: 15,
+    name: "Strawberry Shake",
+    description: "Sweet strawberry shake with creamy texture.",
+    price: "$6.50",
+    image: "/images/menu/strawberry-shake.png",
+    category: "Shakes",
+  },
+  {
+    id: 16,
+    name: "Rose Shake",
+    description: "Delicate rose-flavored shake blended with milk.",
+    price: "$6.00",
+    image: "/images/menu/rose-shake.png",
+    category: "Shakes",
+  },
+  {
+    id: 17,
+    name: "Oreo Shake",
+    description: "Creamy shake blended with Oreos & chocolate syrup.",
+    price: "$6.99",
+    image: "/images/menu/oreo-shake.png",
+    category: "Shakes",
+  },
+  {
+    id: 18,
+    name: "Chocolate Shake",
+    description: "Rich chocolate shake topped with whipped cream.",
+    price: "$6.99",
+    image: "/images/menu/chochlate-shake.png",
+    category: "Shakes",
+  },
+
+  // 🍵 Tea
+  {
+    id: 19,
+    name: "Karak Tea",
+    description: "Strong spiced tea brewed with milk & cardamom.",
+    price: "$2.99",
+    image: "/images/menu/karak-tea.png",
+    category: "Tea",
+  },
+
+  // 🍰 Deserts
+  {
+    id: 20,
+    name: "Chocolate Lava Cake",
+    description: "Warm chocolate cake with molten center.",
+    price: "$7.50",
+    image: "/images/menu/choclate-lava-cake.png",
+    category: "Deserts",
+  },
+  {
+    id: 21,
+    name: "Kheer",
+    description: "Traditional rice pudding cooked with milk & sugar.",
+    price: "$5.99",
+    image: "/images/menu/kheer.png",
+    category: "Deserts",
+  },
+  {
+    id: 22,
+    name: "Gulab Jamun",
+    description: "Soft fried milk dumplings soaked in syrup.",
+    price: "$5.50",
+    image: "/images/menu/gulab-jamun.png",
+    category: "Deserts",
   },
 ];
 
-const categories = ["Pizza", "Burger", "Chicken", "Combo"];
+const categories = ["Samosa", "Desi", "Pakora", "Shakes", "Tea", "Deserts"];
+
 const features = [
   "Event Creating",
   "Meal Plans",
@@ -115,7 +206,7 @@ const features = [
 ];
 
 export default function MenuSection() {
-  const [activeCategory, setActiveCategory] = useState("Pizza");
+  const [activeCategory, setActiveCategory] = useState("Samosa");
 
   const filteredItems = menuItems.filter(
     (item) => item.category === activeCategory
@@ -139,35 +230,50 @@ export default function MenuSection() {
           />
         </div>
         <div className="flex justify-center flex-wrap gap-3 md:gap-4 mb-8">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:scale-105 ${
-                activeCategory === category
-                  ? "bg-primary-red text-white shadow-lg"
-                  : "bg-white text-dark-text hover:bg-primary-red hover:text-white shadow-md"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={10}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            modules={[Autoplay]}
+            loop
+            breakpoints={{
+              768: { slidesPerView: 4, spaceBetween: 10 },
+              1024: { slidesPerView: 6, spaceBetween: 10 },
+            }}
+            className="w-full lg:w-4/5 mx-auto"
+          >
+            {categories.map((category) => (
+              <SwiperSlide>
+                <button
+                  key={category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:scale-105 w-[90%] mx-auto my-4 ${
+                    activeCategory === category
+                      ? "bg-primary-red text-white shadow-lg"
+                      : "bg-white text-dark-text hover:bg-primary-red hover:text-white shadow-md"
+                  }`}
+                >
+                  {category}
+                </button>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           <aside className="lg:col-span-4 space-y-8 hidden lg:block">
             <Image
               unoptimized
-              src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/menu-1-1.jpg"
+              src="/images/menu-side.png"
               alt="Assorted food items"
-              width={390}
-              height={330}
-              className="rounded-lg w-full max-h-[550px] object-cover"
+              width={600}
+              height={600}
+              className="rounded-lg w-full h-[550px]"
             />
           </aside>
 
           <main className="lg:col-span-8">
-            <div className="space-y-4 max-h-[820px] overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-primary-red scrollbar-track-red-100">
+            <div className="space-y-4 max-h-[560px] overflow-y-auto pr-4 custom-scrollbar">
               {filteredItems.map((item) => (
                 <div
                   key={item.id}
@@ -190,7 +296,7 @@ export default function MenuSection() {
                         {item.description}
                       </p>
                     </div>
-                    <span className="hidden md:inline-block flex-grow border-b-2 border-dotted border-gray-300 mx-4 "></span>
+                    <span className="hidden md:inline-block flex-grow border-b-2 border-dotted border-primary-red mx-4 "></span>
                     <p className="text-lg font-bold text-primary-red flex-shrink-0 mt-2 md:mt-0">
                       {item.price}
                     </p>

@@ -1,12 +1,15 @@
 "use client";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
-    "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_5-305x300.png",
-    "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_6-305x300.png",
+    "/images/menu/biryani.png",
+    "/images/menu/papri-chat.png",
+    "/images/menu/nihari.png",
+    "/images/menu/daal-makhni.png",
   ];
 
   useEffect(() => {
@@ -24,9 +27,7 @@ export default function App() {
         <div className="lg:w-1/2 space-y-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
             Savor the Flavor of
-            <span className="pl-3 text-primary-red">
-            Authentic Cuisine
-            </span>
+            <span className="pl-3 text-primary-red">Authentic Cuisine</span>
           </h1>
 
           <p className="text-lg text-gray-600 leading-relaxed">
@@ -42,7 +43,7 @@ export default function App() {
         </div>
 
         {/* Right Side - Image Slider */}
-        <div className="lg:w-1/3 mx-auto relative h-80 lg:h-[400px] w-full overflow-hidden rounded-2xl ">
+        <div className="lg:w-1/3 mx-auto relative h-86 md:h-[500px] lg:h-[500px] w-full overflow-hidden rounded-2xl ">
           {images.map((img, index) => (
             <div
               key={index}
@@ -54,10 +55,12 @@ export default function App() {
                   : "translate-x-full scale-95 opacity-0 z-0"
               }`}
             >
-              <img
+              <Image
                 src={img}
                 alt={`Food showcase ${index + 1}`}
-                className="w-full h-full object-cover"
+                width={450}
+                height={450}
+                className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] lg:w-[450px] lg:h-[450px] mx-auto"
               />
               {/* Overlay gradient for better text contrast */}
               <div className="absolute inset-0 rounded-2xl"></div>

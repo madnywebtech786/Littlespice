@@ -5,40 +5,36 @@ import Link from "next/link";
 
 const foodItems = [
   {
-    imageSrc:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_3-305x300.png",
+    imageSrc: "/images/menu/biryani.png",
     price: "$177.85",
-    title: "Fry Chicken Ball",
+    title: "Biryani",
     description:
       "At the heart of our kitchen are bold flavors, high-quality ingredients",
     cartLink: "/?add-to-cart=637",
     productLink: "/barab-shop/fry-chicken-ball/",
   },
   {
-    imageSrc:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_5-305x300.png",
+    imageSrc: "/images/menu/nihari.png",
     price: "$30.99",
-    title: "Delicious Black Burger",
+    title: "Nihari",
     description:
       "The soul of our kitchen: bold flavors, high-quality ingredients",
     cartLink: "/?add-to-cart=635",
     productLink: "/barab-shop/delicious-black-burger/",
   },
   {
-    imageSrc:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_6-305x300.png",
+    imageSrc: "/images/menu/daal-makhni.png",
     price: "$30.00",
-    title: "Solo Snack Pack",
+    title: "Daal Makhni",
     description: "Our kitchen thrives on bold flavors and premium ingredients",
     cartLink: "/?add-to-cart=634",
     productLink: "/barab-shop/solo-snack-pack/",
   },
   {
-    imageSrc:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/product_1_8-305x300.png",
+    imageSrc: "/images/menu/choclate-lava-cake.png",
     price: "$19.00",
     originalPrice: "$29.00",
-    title: "Pepperoni Burger",
+    title: "Lava Cake",
     description:
       "Fueling our kitchen: bold flavors and high-quality ingredients",
     cartLink: "/?add-to-cart=632",
@@ -118,8 +114,6 @@ export default function FeaturedFoods() {
             <FoodCard key={index} item={item} />
           ))}
         </div>
-
-       
       </div>
     </section>
   );

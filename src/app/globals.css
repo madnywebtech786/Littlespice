@@ -214,3 +214,54 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
 }
+
+
+/* globals.css */
+
+/* optional: set your brand colors (override as needed) */
+:root {
+  --scroll-thumb: #e11d48;     /* primary-red (default) */
+  --scroll-track: #fff7f7;     /* track background */
+  --scroll-thumb-hover: #b3123a;
+  --scroll-thumb-glow: rgba(225, 29, 72, 0.18);
+}
+
+/* Reusable custom scrollbar */
+.custom-scrollbar {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;              /* vertical scrollbar width */
+  height: 10px;             /* horizontal scrollbar height */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+  border-radius: 9999px;
+  margin: 6px 0;            /* creates breathing room at top/bottom */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 9999px;
+  border: 2px solid transparent;      /* creates padding around thumb */
+  background-clip: padding-box;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+/* hover/focus state for thumb (makes it nicer when interacting) */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar::-webkit-scrollbar-thumb:active,
+.custom-scrollbar:focus::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-hover);
+  box-shadow: 0 0 0 6px var(--scroll-thumb-glow);
+}
+
+/* ensure corner is clean */
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
