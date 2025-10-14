@@ -96,7 +96,7 @@ const FoodCategories = () => {
               Food Category
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark-text mt-2">
-              Browse <span className="text-primary-red"> Fast Foods </span>
+              Browse <span className="text-primary-red"> Foods </span>
               Category
             </h2>
             <div className="flex justify-center mt-1">

@@ -9,10 +9,13 @@ export default function MenuItemCard({ img, name, desc, price, link = "" }) {
         <div className="shape-mask bg-[#fff3d6] shadow-2xl mask-container min-w-[300px] min-h-[350px] flex items-center justify-center relative flex-none">
           <Image
             src={img}
-            alt="pizza"
-            className="w-40 h-40 md:w-60 md:h-60 object-cover rounded-full drop-shadow-2xl z-10 transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12"
+            alt="Little Spice"
+            // className="w-40 h-40 md:w-60 md:h-60 object-cover rounded-full drop-shadow-2xl z-10 transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12"
+            className="w-72 md:w-96 h-auto object-contain drop-shadow-2xl z-10 transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12"
+
+
             unoptimized
-            width={400}
+            width={500}
             height={400}
           />
         </div>
