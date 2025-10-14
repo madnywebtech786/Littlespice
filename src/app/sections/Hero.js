@@ -1,73 +1,124 @@
-"use client";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-
-export default function App() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const images = [
-    "/images/menu/biryani.png",
-    "/images/menu/papri-chat.png",
-    "/images/menu/nihari.png",
-    "/images/menu/daal-makhni.png",
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
+'use client';
+import React from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
+import './style/Header.css';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import Image from 'next/image';
+import Link from 'next/link';
+export default function Header() {
   return (
-    <header className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 flex items-center py-16 px-4 sm:px-8 md:px-12 lg:px-20">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-        {/* Left Side - Text Content */}
-        <div className="lg:w-1/2 space-y-8">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
-            Savor the Flavor of
-            <span className="pl-3 text-primary-red">Authentic Cuisine</span>
-          </h1>
-
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Discover a world of exquisite flavors and culinary delights. Our
-            carefully crafted dishes use only the freshest ingredients, prepared
-            with passion and tradition. From farm to table, we ensure every bite
-            is an unforgettable experience.
-          </p>
-
-          <button className="bg-primary-red hover:to-red-600 text-white font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 text-lg">
-            Explore Our Menu
-          </button>
-        </div>
-
-        {/* Right Side - Image Slider */}
-        <div className="lg:w-1/3 mx-auto relative h-86 md:h-[500px] lg:h-[500px] w-full overflow-hidden rounded-2xl ">
-          {images.map((img, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                index === currentImageIndex
-                  ? "translate-x-0 scale-100 opacity-100 z-10"
-                  : index < currentImageIndex
-                  ? "-translate-x-full scale-95 opacity-0 z-0"
-                  : "translate-x-full scale-95 opacity-0 z-0"
-              }`}
-            >
-              <Image
-                src={img}
-                alt={`Food showcase ${index + 1}`}
-                width={450}
-                height={450}
-                className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] lg:w-[450px] lg:h-[450px] mx-auto"
-              />
-              {/* Overlay gradient for better text contrast */}
-              <div className="absolute inset-0 rounded-2xl"></div>
+    <div className='w-full relative'>
+      <Swiper
+        modules={[Navigation, Pagination, A11y, Autoplay]}
+        spaceBetween={0}
+        slidesPerView={1}
+        draggable
+        autoplay={{ delay: 5000 }}
+        loop={true}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        className='h-[550px] lg:!h-[700px] z-10'
+      >
+        <SwiperSlide>
+          <div className='w-full h-full  flex items-center slide1Bg'>
+            <div className='w-full xl:w-2/3 h-full flex py-32 xl:py-0 xl:items-center justify-center px-4 '>
+              <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
+                <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
+                  <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
+                    Enchanting Wedding Decor
+                  </h3>
+                  <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
+                    Transform your wedding venue into a breathtaking masterpiece
+                    with our expert decoration services.
+                  </p>
+                </div>
+                <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
+                  Contact Now
+                </button>
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </header>
+            <div className='hidden xl:w-1/3'></div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='w-full h-full  flex items-center slide2Bg'>
+            <div className='w-full xl:w-2/3 h-full flex py-32 xl:py-0 xl:items-center justify-center px-4 '>
+              <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
+                <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
+                  <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
+                    Floral Elegance for Your Big Day
+                  </h3>
+                  <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
+                    Stunning flower arrangements that add charm, romance, and
+                    sophistication to your wedding.
+                  </p>
+                </div>
+                <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
+                  Call Now
+                </button>
+              </div>
+            </div>
+            <div className='hidden xl:w-1/3'></div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='w-full h-full  flex items-center slide3Bg'>
+            <div className='w-full xl:w-2/3 h-full flex py-32 xl:py-0 xl:items-center justify-center px-4 '>
+              <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
+                <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
+                  <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
+                    Seamless <br/> Coordination
+                  </h3>
+                  <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
+                    From planning to execution, we handle every detail so you
+                    can enjoy your special day stress-free.
+                  </p>
+                </div>
+                <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
+                  Get Free Quote
+                </button>
+              </div>
+            </div>
+            <div className='hidden xl:w-1/3'></div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='w-full h-full  flex items-center slide4Bg'>
+            <div className='w-full xl:w-2/3 h-full flex py-32 xl:py-0 xl:items-center justify-center px-4 '>
+              <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
+                <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
+                  <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
+                    A Celebration to Remember
+                  </h3>
+                  <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
+                    Exquisite décor, delicious catering, and a dreamy wedding
+                    cake—all tailored to perfection.
+                  </p>
+                </div>
+                <Link href={'tel:+14034026723'}> 
+                <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
+                  Call +1 (403) 402-6723
+                </button>
+                </Link>
+              </div>
+            </div>
+            <div className='hidden xl:w-1/3'></div>
+          </div>
+        </SwiperSlide>
+
+        <div className='swiper-button-next !hidden md:!block'></div>
+        <div className='swiper-button-prev !hidden md:!block'></div>
+      </Swiper>
+
+    </div>
   );
 }

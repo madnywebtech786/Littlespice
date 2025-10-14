@@ -331,6 +331,7 @@ export const menuItems = [
 ];
 
 export const categories = [
+  "All",
   "Starters",
   "Veg. Curry Platters",
   "Chicken Curry Platters",

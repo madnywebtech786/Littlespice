@@ -15,6 +15,7 @@ const navItems = [
   { name: "HOME", href: "/", active: true },
   { name: "ABOUT", href: "/about-us" },
   { name: "MENU", href: "/menu" },
+  { name: "Gallery", href: "/gallery" },
   // {
   //   name: "MENU",
   //   href: "#",
@@ -65,7 +66,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-20">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex-shrink-0">
-            <h2 className="text-3xl text-primary-red">Little Spice</h2>
+            <Image src={"/images/logo.png"} width={250} height={150} />
           </Link>
 
           <nav className="hidden lg:flex items-center">
@@ -74,7 +75,7 @@ const Header = () => {
                 <li key={item.name} className="relative group">
                   <Link
                     href={item.href}
-                    className={`flex items-center gap-1 text-sm font-medium uppercase transition-colors hover:text-primary-red ${
+                    className={`flex items-center gap-1 text-sm font-bold uppercase transition-colors hover:text-primary-red ${
                       item.active ? "text-primary-red" : "text-dark-text"
                     }`}
                   >
@@ -185,7 +186,7 @@ const Header = () => {
                 <li key={item.name} className="border-b border-gray-200">
                   <Link
                     href={item.href}
-                    className="flex justify-between items-center px-6 py-3 text-sm font-medium uppercase hover:text-primary-red transition-colors"
+                    className="flex justify-between items-center px-6 py-3 text-sm font-bold uppercase hover:text-primary-red transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}

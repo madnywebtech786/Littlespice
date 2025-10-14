@@ -16,11 +16,12 @@ const features = [
 ];
 
 export default function MenuSection() {
-  const [activeCategory, setActiveCategory] = useState("Samosa");
+  const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredItems = menuItems.filter(
-    (item) => item.category === activeCategory
-  );
+ const filteredItems =
+    activeCategory === "All"
+      ? menuItems
+      : menuItems.filter((item) => item.category === activeCategory);
 
   return (
     <section className="py-16 px-4 sm:px-8 md:px-12 lg:px-20 bg-[#FFFBF2]">
@@ -48,7 +49,7 @@ export default function MenuSection() {
             loop
             breakpoints={{
               768: { slidesPerView: 4, spaceBetween: 10 },
-              1024: { slidesPerView: 6, spaceBetween: 10 },
+              1024: { slidesPerView: 4, spaceBetween: 10 },
             }}
             className="w-full lg:w-4/5 mx-auto"
           >
@@ -57,7 +58,7 @@ export default function MenuSection() {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:scale-105 w-[90%] mx-auto my-4 ${
+                  className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 w-[90%] mx-auto my-4 ${
                     activeCategory === category
                       ? "bg-primary-red text-white shadow-lg"
                       : "bg-white text-dark-text hover:bg-primary-red hover:text-white shadow-md"
@@ -73,7 +74,6 @@ export default function MenuSection() {
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           <aside className="lg:col-span-4 space-y-8 hidden lg:block">
             <Image
-              unoptimized
               src="/images/menu-side.png"
               alt="Assorted food items"
               width={600}

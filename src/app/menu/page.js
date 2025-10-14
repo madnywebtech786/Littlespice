@@ -7,12 +7,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import MenuItemCard from "../components/MenuItemCard";
 import { categories, menuItems } from "../data/menuData";
-export default function page() {
-  const [activeCategory, setActiveCategory] = useState("Samosa");
 
-  const filteredItems = menuItems.filter(
-    (item) => item.category === activeCategory
-  );
+export default function page() {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredItems =
+    activeCategory === "All"
+      ? menuItems
+      : menuItems.filter((item) => item.category === activeCategory);
+
   return (
     <div>
       <Breadcrumb name={"Our Menu"} />
@@ -40,16 +43,15 @@ export default function page() {
               loop
               breakpoints={{
                 768: { slidesPerView: 4, spaceBetween: 10 },
-                1024: { slidesPerView: 6, spaceBetween: 10 },
+                1024: { slidesPerView: 4, spaceBetween: 10 },
               }}
               className="w-full lg:w-4/5 mx-auto"
             >
               {categories.map((category) => (
-                <SwiperSlide>
+                <SwiperSlide key={category}>
                   <button
-                    key={category}
                     onClick={() => setActiveCategory(category)}
-                    className={`px-6 py-3 rounded-full text-base font-semibold transition-all duration-300 transform hover:scale-105 w-[90%] mx-auto my-4 ${
+                    className={`px-4 py-3 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 w-[90%] mx-auto my-4 ${
                       activeCategory === category
                         ? "bg-primary-red text-white shadow-lg"
                         : "bg-white text-dark-text hover:bg-primary-red hover:text-white shadow-md"
@@ -64,8 +66,8 @@ export default function page() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 auto-rows-fr">
-          {menuItems.map((item, index) => (
-            <MenuItemCard {...item} />
+          {filteredItems.map((item, index) => (
+            <MenuItemCard key={item.id ?? index} {...item} />
           ))}
         </div>
       </section>
