@@ -20,7 +20,7 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
+    { name: "About Us", href: "/about-us" },
     { name: "Menu", href: "/menu" },
     { name: "Contact Us", href: "/contact" },
   ];
@@ -33,7 +33,7 @@ const Footer = () => {
           <div className="space-y-4 pr-4">
             <Link href="/" className="inline-flex items-center space-x-2">
               <span className="text-primary-red text-3xl font-bold">
-                Little Spicy
+                Little Spice
               </span>
             </Link>
             <p className="text-white text-base leading-relaxed">
@@ -82,10 +82,10 @@ const Footer = () => {
                   className="text-primary-red mt-1 flex-shrink-0"
                 />
                 <a
-                  href="tel:+11234567890"
+                  href="tel:+14034551559"
                   className="hover:text-primary-red transition-colors"
                 >
-                  (123) 456-7890
+                  (403) 455-1559
                 </a>
               </li>
               <li className="flex items-start space-x-3">
@@ -94,10 +94,10 @@ const Footer = () => {
                   className="text-primary-red mt-1 flex-shrink-0"
                 />
                 <a
-                  href="mailto:info@barab.com"
+                  href="mailto:info@littlespice.ca"
                   className="hover:text-primary-red transition-colors"
                 >
-                  info@barab.com
+                  info@littlespice.ca
                 </a>
               </li>
               <li className="flex items-start space-x-3">
@@ -106,9 +106,9 @@ const Footer = () => {
                   className="text-primary-red mt-1 flex-shrink-0"
                 />
                 <span>
-                  123 Calgary Trail SW,
+                  9669 Macleod Trl SW
                   <br />
-                  Calgary, AB, Canada
+                  Calgary, AB T2J 0P6
                 </span>
               </li>
             </ul>
@@ -120,13 +120,7 @@ const Footer = () => {
             <div className="w-16 h-0.5 bg-primary-red mb-5"></div>
             <div className="text-white space-y-2">
               <p className="text-white">
-                Mon - Tue: <span className="text-white">10:00AM - 20:00PM</span>
-              </p>
-              <p className="text-white">
-                Fri - Sun: <span className="text-white">12:00AM - 23:00PM</span>
-              </p>
-              <p className="pt-2 text-white">
-                We are closed on Wednesday & Thursday.
+                Mon - Sun: <span className="text-white">11:00AM - 10:00PM</span>
               </p>
             </div>
           </div>
@@ -138,7 +132,7 @@ const Footer = () => {
         <div className="container py-6 text-sm">
           <div className="flex justify-center items-center space-y-4 sm:space-y-0">
             <p className=" text-white">
-              © Copyright 2024, Barab. All Rights Reserved.
+              © Copyright 2025, Little Spice All Rights Reserved.
             </p>
           </div>
         </div>

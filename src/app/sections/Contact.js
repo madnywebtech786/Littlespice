@@ -41,7 +41,7 @@ const Contact = () => {
                   <div className="flex flex-col gap-2">
                     <span className="font-semibold text-xl">Address</span>
                     <p className=" text-gray-600">
-                      8550 Preston Rd, Ingleswood, MA 02360
+                      9669 Macleod Trl SW, Calgary, AB T2J 0P6
                     </p>
                   </div>
                 </div>
@@ -53,9 +53,9 @@ const Contact = () => {
                     <PhoneCall size={20} className="text-white w-8 h-8" />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="font-semibold text-xl">Address</span>
+                    <span className="font-semibold text-xl">Phone No</span>
                     <p className=" text-gray-600">
-                      8550 Preston Rd, Ingleswood, MA 02360
+                      403-455-1559
                     </p>
                   </div>
                 </div>
@@ -67,9 +67,9 @@ const Contact = () => {
                     <Clock9 size={20} className="text-white w-8 h-8" />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="font-semibold text-xl">Address</span>
+                    <span className="font-semibold text-xl">Opening Hours</span>
                     <p className=" text-gray-600">
-                      8550 Preston Rd, Ingleswood, MA 02360
+                      Monday-Sunday 11am-10pm
                     </p>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ const Contact = () => {
       </div>
 
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321200.49227131513!2d-114.087835!3d51.027623299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537170039f843fd5%3A0x266d3bb1b652b63a!2sCalgary%2C%20AB%2C%20Canada!5e0!3m2!1sen!2s!4v1755347493635!5m2!1sen!2s"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.599129213052!2d-114.07574562356405!3d50.968115471695725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5371713b2f258a1b%3A0x312cd284d42d4230!2sLittle%20Spice!5e0!3m2!1sen!2sca!4v1760429014596!5m2!1sen!2sca"
         allowfullscreen="true"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"

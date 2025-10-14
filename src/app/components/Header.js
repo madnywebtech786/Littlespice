@@ -13,7 +13,7 @@ import {
 
 const navItems = [
   { name: "HOME", href: "/", active: true },
-  { name: "ABOUT", href: "/about-us" },
+  { name: "ABOUT US", href: "/about-us" },
   { name: "MENU", href: "/menu" },
   { name: "Gallery", href: "/gallery" },
   // {
@@ -40,7 +40,7 @@ const navItems = [
   //     { name: "Single Link", href: "#" },
   //   ],
   // },
-  { name: "CONTACT", href: "/contact" },
+  { name: "CONTACT US", href: "/contact" },
 ];
 
 const Header = () => {

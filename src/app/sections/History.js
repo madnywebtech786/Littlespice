@@ -2,28 +2,28 @@ import Image from "next/image";
 
 const timelineData = [
   {
-    year: "1998",
-    title: "Evolution of Restaurants",
+    year: "2015",
+    title: "The Beginning of Little Spice",
     description:
-      "At the heart of our kitchen are bold flavors, high-quality ingredients, and a commitment to consistency.",
+      "A decade ago, Little Spice Restaurant opened its doors in Calgary, bringing authentic Indian and Pakistani flavors to the local community.",
     imageUrl:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/history.jpg",
+      "/images/gallery/IMG_3450.webp",
   },
   {
-    year: "2016",
-    title: "Fine Dining & the Concept",
+    year: "2018",
+    title: "Growing with Passion",
     description:
-      "At the heart of our kitchen are bold flavors, high-quality ingredients, and a commitment to consistency.",
+      "With love from our loyal customers, Little Spice expanded its menu and refined its recipes — blending traditional South Asian cooking with a modern fast-food twist.",
     imageUrl:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/history1.jpg",
+      "/images/gallery/IMG_3491.webp",
   },
   {
     year: "2025",
-    title: "Modern Fast Food Origins",
+    title: "A New Chapter Begins",
     description:
-      "At the heart of our kitchen are bold flavors, high-quality ingredients, and a commitment to consistency.",
+      "After years of success, we proudly reopened Little Spice Restaurant in 2025 with a fresh new look and upgraded experience.",
     imageUrl:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/history2.jpg",
+      "/images/gallery/IMG_3447.webp",
   },
 ];
 
@@ -33,17 +33,17 @@ const HistorySection = () => {
       className="relative bg-cover bg-center bg-fixed py-16 px-4 sm:px-8 md:px-12 lg:px-20"
       style={{
         backgroundImage:
-          "url('https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/history-main.jpg')",
+          "url('/images/gallery/IMG_3492.webp')",
       }}
     >
-      <div className="absolute inset-0 bg-dark-text/90"></div>
+      <div className="absolute inset-0 bg-dark-text/70"></div>
       <div className="container relative z-10 mx-auto px-4">
         <div className="mb-16 text-center">
           <p className="text-base font-semibold uppercase tracking-widest text-primary-red">
             Our History
           </p>
           <h2 className="mt-2 text-4xl font-bold text-white md:text-5xl">
-            A <span className="text-secondary">  History</span> of restaurant
+            A <span className="text-primary-red">  History</span> of restaurant
           </h2>
           <Image
             unoptimized
@@ -58,7 +58,7 @@ const HistorySection = () => {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-16">
           {timelineData.map((item, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <h4 className="mb-4 text-7xl font-bold text-warm-orange">
+              <h4 className="mb-4 text-7xl font-bold text-primary-red">
                 {item.year}
               </h4>
               <h3 className="mb-3 text-2xl font-bold text-white">

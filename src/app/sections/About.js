@@ -37,21 +37,17 @@ const AboutSection = () => {
               About our restaurant
             </span>
             <h2 className="text-dark-text font-bold text-4xl md:text-[45px] leading-tight mt-3 mb-6">
-              We <span className="text-primary-red"> invite you </span> to visit our Fast food Restaurant
+              We <span className="text-primary-red"> invite you </span> to visit our Restaurant
             </h2>
             <p className="text-gray-text text-lg leading-relaxed">
-              At the heart of our kitchen are bold flavors, high-quality
-              ingredients, and a commitment to consistency. From juicy burgers,
-              crispy fries, and cheesy pizzas to spicy wraps and refreshing
-              drinks, every item on our menu is made to order and packed with
-              taste.
+              Welcome to Little Spice Restaurant, your go-to destination in Calgary for authentic Indian and Pakistani cuisine — where every dish is crafted with passion, flavor, and a touch of home.At Little Spice, we blend tradition with taste. From aromatic biryanis and creamy butter chicken to sizzling kebabs, spicy wraps, and fresh naan, every meal is prepared with high-quality ingredients and the perfect balance of spices.
             </p>
             <div className="mt-8 pt-4">
               <p className={`${caveat.className} text-dark-text text-5xl`}>
-                Parvez Hossain Imon
+                10 Years Of Experience
               </p>
               <p className="text-gray-text mt-1 text-sm font-medium">
-                Restaurant owner
+                Best In Calgary
               </p>
             </div>
             <div className="mt-10">
@@ -60,7 +56,7 @@ const AboutSection = () => {
                 size="lg"
                 className="bg-primary-red text-white font-bold rounded-md hover:bg-red-700 transition-colors duration-300 text-sm py-6 px-8 uppercase tracking-wider"
               >
-                <Link href="/reservation">VISIT OUR RESTAURANT</Link>
+                <Link href="/contact">VISIT OUR RESTAURANT</Link>
               </button>
             </div>
           </div>

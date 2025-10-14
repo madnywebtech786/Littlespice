@@ -11,25 +11,22 @@ const testimonials = [
     image:
       "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/testi-1-1.png",
     quote:
-      "“Every pizza starts with our hand-tossed dough, made fresh daily and topped with our signature sauce crafted from ripe tomatoes and secret herbs.”",
+      "“Absolutely love Little Spice! The flavors are incredible — everything tastes fresh and authentic. Their butter chicken and biryani remind me of home. The new look after renovation is amazing too!”",
     name: "Victoria Wotton",
-    company: "Fementum Odio Co.",
   },
   {
     image:
       "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/testi-1-2.png",
     quote:
-      "“Freshly tossed dough forms the base of every pizza, of the name topped with a homemade sauce made from juicy tomatoes and our special herb recipe.”",
+      "“We stopped by Little Spice for lunch and were blown away! The food came out hot, flavorful, and perfectly spiced. The staff were super friendly and welcoming. Easily one of Calgary’s best Indian and Pakistani restaurants.”",
     name: "Emma Mia",
-    company: "Fementum Odio Co.",
   },
   {
     image:
       "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/testi-1-1.png",
     quote:
-      "“Our commitment to quality means we source the best ingredients, from the finest cheeses to the freshest vegetables, for a truly exceptional taste.”",
+      "“Little Spice never disappoints! From the juicy kebabs to the crispy samosas, every dish is packed with flavor. The renovated space feels cozy and modern — perfect for family dinners or takeout nights.”",
     name: "Alex Johnson",
-    company: "Gourmet Foods Inc.",
   },
 ];
 

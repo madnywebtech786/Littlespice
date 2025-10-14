@@ -3,12 +3,12 @@ import Link from "next/link";
 
 const scheduleData = [
   {
-    days: "Monday to Tuesday",
-    hours: ["10:00 AM", "20:00 PM"],
+    days: "Monday to Friday",
+    hours: ["11:00 AM", "10:00 PM"],
   },
   {
-    days: "Friday to Sunday",
-    hours: ["12:00 AM", "23:00 PM"],
+    days: "Saturday to Sunday",
+    hours: ["11:00 AM", "10:00 PM"],
   },
 ];
 
@@ -20,8 +20,8 @@ const OpeningHours = () => {
         <div className="relative h-96 lg:h-auto min-h-[550px] w-full">
           <Image
             unoptimized
-            src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/opening-1-left.jpg"
-            alt="Interior of the Barab restaurant"
+            src="/images/gallery/IMG_3450.webp"
+            alt="Interior of the Little Spice"
             fill
             sizes="(max-width: 1023px) 100vw, 50vw"
             className="object-cover rounded-tr-3xl rounded-br-3xl"
@@ -72,7 +72,7 @@ const OpeningHours = () => {
 
             <div className="mt-12">
               <Link
-                href="/reservation"
+                href="/contact"
                 className="inline-block bg-primary-red text-white font-bold py-4 px-8 rounded-md text-base hover:bg-red-700 transition-colors duration-300 shadow-md"
               >
                 Book Your Table

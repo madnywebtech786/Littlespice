@@ -9,28 +9,28 @@ import { Autoplay,Navigation } from "swiper/modules";
 
 const galleryImages = [
   {
-    src: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/gallery_1_1.jpg",
+    src: "/images/gallery/IMG_3447.webp",
   },
   {
-    src: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/gallery_1_2.jpg",
+    src: "/images/gallery/IMG_3450.webp",
   },
   {
-    src: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/gallery_1_3.jpg",
+    src: "/images/gallery/IMG_3453.webp",
   },
   {
-    src: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/gallery_1_4.jpg",
+    src: "/images/gallery/IMG_3456.webp",
   },
   {
-    src: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/gallery_1_5.jpg",
+    src: "/images/gallery/IMG_3484.webp",
   },
   {
-    src: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/gallery_1_3.jpg",
+    src: "/images/gallery/IMG_3491.webp",
   },
   {
-    src: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/gallery_1_1.jpg",
+    src: "/images/gallery/IMG_3492.webp",
   },
   {
-    src: "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/gallery_1_2.jpg",
+    src: "/images/gallery/IMG_3497.webp",
   },
 ];
 
@@ -153,7 +153,7 @@ const FoodGallery = () => {
               Our Food Gallery
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-dark-text mt-2 !leading-tight">
-              Let’s See our Fast Food Category
+              Where Every Bite Is a Burst of Flavor
             </h2>
             <Image
               unoptimized
@@ -205,14 +205,23 @@ const FoodGallery = () => {
                   role="button"
                   aria-label={`View image ${index + 1} in lightbox`}
                 >
-                  <Image
+                  {/* <Image
                     unoptimized
                     src={item.src}
                     alt={`Food gallery image ${index + 1}`}
                     width={270}
                     height={270}
                     className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  /> */}
+                  <Image
+                    unoptimized
+                    src={item.src}
+                    alt={`Food gallery image ${index + 1}`}
+                    width={320}
+                    height={320}
+                    className="w-full h-64 md:h-72 object-cover transform group-hover:scale-110 transition-transform duration-300"
                   />
+
                   <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-16 h-16 bg-primary-red rounded-full flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
                       <PlusIcon />

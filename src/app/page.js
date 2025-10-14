@@ -8,7 +8,7 @@ import HistorySection from "./sections/History";
 import MenuSection from "./sections/FoodMenu";
 import FoodGallery from "./sections/FoodGallery";
 import SpecialOffer from "./sections/SpecialOffers";
-import ChefTeam from "./sections/Chefs";
+// import ChefTeam from "./sections/Chefs";
 import OpeningHours from "./sections/OpeningHours";
 import Testimonials from "./sections/Testimonials";
 import Footer from "./components/Footer";
@@ -25,7 +25,7 @@ export default function Home() {
       <MenuSection />
       <FoodGallery />
       <SpecialOffer />
-      <ChefTeam />
+      {/* <ChefTeam /> */}
       <OpeningHours />
       <Testimonials />
       <Contact />
