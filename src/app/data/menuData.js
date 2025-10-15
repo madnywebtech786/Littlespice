@@ -136,7 +136,7 @@ export const menuItems = [
     name: "Lamb Vindaloo",
     desc: "Lamb with potatoes",
     price: "$23.95",
-    img: "/images/menu/rose-shake.png",
+    img: "/images/menu/lambcurry/vindaloo.png",
     category: "Lamb & Beef Curry Platters",
   },
   {
@@ -144,7 +144,7 @@ export const menuItems = [
     name: "Lamb Qorma",
     desc: "Coconut Lamb Curry",
     price: "$23.95",
-    img: "/images/menu/oreo-shake.png",
+    img: "/images/menu/lambcurry/qorma.png",
     category: "Lamb & Beef Curry Platters",
   },
   {
@@ -152,7 +152,7 @@ export const menuItems = [
     name: "Haleem",
     desc: "Lentils with beef",
     price: "$23.95",
-    img: "/images/menu/chochlate-shake.png",
+    img: "/images/menu/lambcurry/haleem.png",
     category: "Lamb & Beef Curry Platters",
   },
   {
@@ -160,7 +160,7 @@ export const menuItems = [
     name: "Nihari",
     desc: "Beef Shank Curry",
     price: "$23.95",
-    img: "/images/menu/chochlate-shake.png",
+    img: "/images/menu/lambcurry/nihari.png",
     category: "Lamb & Beef Curry Platters",
   },
   //Biryani
@@ -169,7 +169,7 @@ export const menuItems = [
     name: "Chicken Biryani",
     desc: "Boneless Chicken with flavoured rice",
     price: "$16.95",
-    img: "/images/menu/karak-tea.png",
+    img: "/images/menu/biryani/chicken-biryani.png",
     category: "Biryani",
   },
   {
@@ -177,7 +177,7 @@ export const menuItems = [
     name: "Lamb Biryani",
     desc: "Boneless Lamb with flavoured rice",
     price: "$17.95",
-    img: "/images/menu/karak-tea.png",
+    img: "/images/menu/biryani/lamb-biryani.png",
     category: "Biryani",
   },
 
@@ -187,7 +187,7 @@ export const menuItems = [
     name: "Chicken Poutein",
     desc: "Chicken Poutein",
     price: "$13.99",
-    img: "/images/menu/choclate-lava-cake.png",
+    img: "/images/featurefood/poutiene.png",
     category: "Poutiene",
   },
   {
@@ -195,7 +195,7 @@ export const menuItems = [
     name: "Beef Poutein",
     desc: "Beef Poutein",
     price: "$13.99",
-    img: "/images/menu/kheer.png",
+    img: "/images/featurefood/poutiene.png",
     category: "Poutiene",
   },
   //BBQ PLATTER
