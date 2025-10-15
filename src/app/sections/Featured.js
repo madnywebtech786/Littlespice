@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const foodItems = [
   {
-    imageSrc: "/images/menu/biryani.png",
+    imageSrc: "/images/menu/bbq/chicken-tikka-platter.png",
     price: "$21.95",
     title: "Chicken Tikka Platter",
     description:
@@ -13,7 +13,7 @@ const foodItems = [
     cartLink: "/contact",
   },
   {
-    imageSrc: "/images/menu/nihari.png",
+    imageSrc: "/images/menu/bbq/beef-tikka-platter.png",
     price: "$22.95",
     title: "Beef Tikka Platter",
     description:
@@ -21,7 +21,7 @@ const foodItems = [
     cartLink: "/contact",
   },
   {
-    imageSrc: "/images/menu/daal-makhni.png",
+    imageSrc: "/images/menu/bbq/tandori-chicken.png",
     price: "$21.95",
     title: "Tandoori Chicken",
     description:
@@ -29,7 +29,7 @@ const foodItems = [
     cartLink: "/contact",
   },
   {
-    imageSrc: "/images/menu/choclate-lava-cake.png",
+    imageSrc: "/images/menu/bbq/lamb-chops.png",
     price: "$29.95",
     title: "Lamb Chops Platter",
     description:
