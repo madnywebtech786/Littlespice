@@ -17,15 +17,17 @@ const OpeningHours = () => {
     <section className="bg-light-background w-full overflow-hidden">
       <div className="lg:grid lg:grid-cols-2 items-stretch">
         {/* Image Column */}
-        <div className="relative h-96 lg:h-auto min-h-[550px] w-full">
-          <Image
-            unoptimized
-            src="/images/gallery/IMG_3450.webp"
-            alt="Interior of the Little Spice"
-            fill
-            sizes="(max-width: 1023px) 100vw, 50vw"
-            className="object-cover rounded-tr-3xl rounded-br-3xl"
-          />
+        <div className="relative flex items-center justify-center h-96 lg:h-auto min-h-[550px] w-full p-6 sm:p-8 lg:p-10">
+          <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-lg">
+            <Image
+              unoptimized
+              src="/images/gallery/IMG_3450.webp"
+              alt="Interior of the Little Spice"
+              fill
+              sizes="(max-width: 1023px) 100vw, 50vw"
+              className="object-cover rounded-3xl"
+            />
+          </div>
         </div>
 
         {/* Content Column */}

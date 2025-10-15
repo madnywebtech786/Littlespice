@@ -5,7 +5,7 @@ export const menuItems = [
     name: "Veg. Samosa",
     desc: "Home pastry stuffed with potatoes",
     price: "$3.95",
-    img: "/images/menu/veg-samosa.png",
+    img: "/images/menu/starter/veg-samosa.png",
     category: "Starters",
   },
   {
@@ -13,7 +13,7 @@ export const menuItems = [
     name: "Chicken/Beef Samosa",
     desc: "Home pastry stuffed with chicken",
     price: "$5.95",
-    img: "/images/menu/veg-samosa.png",
+    img: "/images/menu/starter/veg-samosa.png",
     category: "Starters",
   },
    {
@@ -21,7 +21,7 @@ export const menuItems = [
     name: "Samosa Chat",
     desc: "Samosa with chickpeas",
     price: "$11.95",
-    img: "/images/menu/samosa-chaat.webp",
+    img: "/images/menu/starter/samosa-chaat.png",
     category: "Starters",
   },
    {
@@ -29,7 +29,7 @@ export const menuItems = [
     name: "Papri Chaat",
     desc: "Wheat wafers topped with potatoes, onion, yogurt sauce",
     price: "$11.95",
-    img: "/images/menu/papri-chaat.webp",
+    img: "/images/menu/starter/papri-chaat.png",
     category: "Starters",
   },
   {
@@ -37,7 +37,7 @@ export const menuItems = [
     name: "Dahi Bhalle",
     desc: "Lentil fritter in yogurt and sauce",
     price: "$12.95",
-    img: "/images/menu/dahi-bhalle.webp",
+    img: "/images/menu/starter/dahi-bhalle.png",
     category: "Starters",
   },
   {
@@ -45,7 +45,7 @@ export const menuItems = [
     name: "Veg Pakoras",
     desc: "Potatoes,onion,spinach",
     price: "$11.95",
-    img: "/images/menu/veg-pakora.webp",
+    img: "/images/menu/starter/veg-pakora.png",
     category: "Starters",
   },
   {
@@ -53,7 +53,7 @@ export const menuItems = [
     name: "Ghobi Pakoras",
     desc: "Cauliflower fritters",
     price: "$11.95",
-    img: "/images/menu/gobi-pakora.webp",
+    img: "/images/menu/starter/gobi-pakora.png",
     category: "Starters",
   },
   {
@@ -61,7 +61,7 @@ export const menuItems = [
     name: "Fish Pakoras",
     desc: "Fish Fritters",
     price: "$14.95",
-    img: "/images/menu/fish-pakora.png",
+    img: "/images/menu/starter/fish-pakora.png",
     category: "Starters",
   },
    // VEG CURRY PLATERS
@@ -70,7 +70,7 @@ export const menuItems = [
     name: "Aloo Ghobi",
     desc: "Cauliflower with Potato",
     price: "$19.95",
-    img: "/images/menu/aloo-ghobi.webp",
+    img: "/images/menu/vegcurry/aalo-ghobi.png",
     category: "Veg. Curry Platters",
   },
   {
@@ -78,7 +78,7 @@ export const menuItems = [
     name: "Channa Masala",
     desc: "Chickpeas",
     price: "$19.95",
-    img: "/images/menu/chana-masala.webp",
+    img: "/images/menu/vegcurry/channa-masala.png",
     category: "Veg. Curry Platters",
   },
    {
@@ -86,7 +86,7 @@ export const menuItems = [
     name: "Palak Paneer",
     desc: "Spinach and cheese",
     price: "$20.95",
-    img: "/images/menu/palak-paneer.webp",
+    img: "/images/menu/vegcurry/palak-panner.png",
     category: "Veg. Curry Platters",
   },
   {
@@ -94,7 +94,7 @@ export const menuItems = [
     name: "Daal Makhni",
     desc: "Black Lentils with butter",
     price: "$20.95",
-    img: "/images/menu/dal-makhni.webp",
+    img: "/images/menu/vegcurry/daal-makhni.png",
     category: "Veg. Curry Platters",
   },
   // CHICKEN CURRY PLATTERS
@@ -103,7 +103,7 @@ export const menuItems = [
     name: "Butter Chicken",
     desc: "Chicken in butter sauce",
     price: "$21.95",
-    img: "/images/menu/butter-chicken.webp",
+    img: "/images/menu/chicken-curry/butter-chicken.png",
     category: "Chicken Curry Platters",
   },
    {
@@ -111,7 +111,7 @@ export const menuItems = [
     name: "Chicken Tikka Masala",
     desc: "Cooked in tomato gravy with cream",
     price: "$21.95",
-    img: "/images/menu/chicken-tikka-platter.webp",
+    img: "/images/menu/chicken-curry/chicken-tikka.png",
     category: "Chicken Curry Platters",
   },
    {
@@ -119,7 +119,7 @@ export const menuItems = [
     name: "Chicken Vindaloo",
     desc: "Chicken Potato curry",
     price: "$21.95",
-    img: "/images/menu/chicken-vindaloo.webp",
+    img: "/images/menu/chicken-curry/chicken-vindalo.png",
     category: "Chicken Curry Platters",
   },
   {
@@ -127,7 +127,7 @@ export const menuItems = [
     name: "Chicken Qorma",
     desc: "Coconut curry",
     price: "$21.95",
-    img: "/images/menu/chicken-qorma.webp",
+    img: "/images/menu/chicken-curry/chicken-qorma.png",
     category: "Chicken Curry Platters",
   },
   // LAMB & BEEF CURRY PLATTERS

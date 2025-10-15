@@ -51,13 +51,11 @@ const AboutSection = () => {
               </p>
             </div>
             <div className="mt-10">
-              <button
-                asChild
-                size="lg"
-                className="bg-primary-red text-white font-bold rounded-md hover:bg-red-700 transition-colors duration-300 text-sm py-6 px-8 uppercase tracking-wider"
-              >
-                <Link href="/contact">VISIT OUR RESTAURANT</Link>
-              </button>
+              <Link href="/contact">
+    <button className="bg-primary-red text-white font-bold rounded-md hover:bg-red-700 transition-colors duration-300 text-sm py-6 px-8 uppercase tracking-wider">
+      VISIT OUR RESTAURANT
+    </button>
+  </Link>
             </div>
           </div>
         </div>

@@ -62,17 +62,17 @@ const SpecialOffer = () => {
         <div className="flex w-full justify-center items-center">
           <div className="text-center w-10/12">
             <div className="relative inline-block mb-6">
-              <h5 className=" flex items-center justify-center text-secondary uppercase font-bold text-sm sm:text-base tracking-wider animate-pulse">
-                save up to 50% off
+              <h5 className=" flex items-center justify-center text-primary-red uppercase font-bold text-sm sm:text-base tracking-wider animate-pulse">
+                save up to 20% off
               </h5>
             </div>
 
             <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight">
-              Super <span className="text-secondary"> Delicious </span> Burger
+              Super <span className="text-primary-red"> Delicious </span> Roll
             </h2>
 
             <p className="text-lg text-white/80 mt-4 font-medium">
-              Limited Time Offer
+              Chicken Tikka or Beef Kebab Roll
             </p>
 
             <div className="flex justify-center items-center space-x-2 sm:space-x-4 mt-8">

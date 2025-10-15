@@ -34,16 +34,17 @@ export default function Header() {
               <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
                 <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
                   <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
-                    Enchanting Wedding Decor
+                   Taste. Spice. Joy.
                   </h3>
                   <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
-                    Transform your wedding venue into a breathtaking masterpiece
-                    with our expert decoration services.
+                    Discover the vibrant flavors of authentic Indian cuisine right here in Calgary. Every dish is crafted with passion and tradition to bring you a truly delightful dining experience.
                   </p>
                 </div>
+                <Link href="/contact">
                 <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
-                  Contact Now
+                  Book Now
                 </button>
+                </Link>
               </div>
             </div>
             <div className='hidden xl:w-1/3'></div>
@@ -55,16 +56,17 @@ export default function Header() {
               <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
                 <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
                   <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
-                    Floral Elegance for Your Big Day
+                     Authentic<br/> Local & Delicious.
                   </h3>
                   <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
-                    Stunning flower arrangements that add charm, romance, and
-                    sophistication to your wedding.
+                    Bringing the heart of Indian cooking to Calgary. Enjoy freshly prepared meals made with love, care, and the finest ingredients.
                   </p>
                 </div>
+                 <Link href="/contact">
                 <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
-                  Call Now
+                  Visit Us
                 </button>
+                </Link>
               </div>
             </div>
             <div className='hidden xl:w-1/3'></div>
@@ -76,16 +78,17 @@ export default function Header() {
               <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
                 <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
                   <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
-                    Seamless <br/> Coordination
+                   Fresh. Bold. Flavorful.
                   </h3>
                   <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
-                    From planning to execution, we handle every detail so you
-                    can enjoy your special day stress-free.
+                    From sizzling appetizers to rich curries, every bite at Little Spice is a journey of taste and aroma that awakens your senses.
                   </p>
                 </div>
+                <Link href="/gallery">
                 <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
-                  Get Free Quote
+                  See Our Gallery
                 </button>
+                </Link>
               </div>
             </div>
             <div className='hidden xl:w-1/3'></div>
@@ -97,16 +100,15 @@ export default function Header() {
               <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
                 <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
                   <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
-                    A Celebration to Remember
+                   Savor Every Bite.
                   </h3>
                   <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
-                    Exquisite décor, delicious catering, and a dreamy wedding
-                    cake—all tailored to perfection.
+                   Bringing the heart of Indian cooking to Calgary. Enjoy freshly prepared meals made with love, care, and the finest ingredients.
                   </p>
                 </div>
-                <Link href={'tel:+14034026723'}> 
+                <Link href={'tel:+14034551559'}> 
                 <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
-                  Call +1 (403) 402-6723
+                  Call +1 (403) 455-1559
                 </button>
                 </Link>
               </div>

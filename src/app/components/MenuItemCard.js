@@ -13,7 +13,7 @@ export default function MenuItemCard({ img, name, desc, price, link = "" }) {
             // className="w-40 h-40 md:w-60 md:h-60 object-cover rounded-full drop-shadow-2xl z-10 transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12"
             className="w-72 md:w-96 h-auto object-contain drop-shadow-2xl z-10 transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12"
             width={500}
-            height={400}
+            height={500}
           />
         </div>
 
@@ -34,3 +34,4 @@ export default function MenuItemCard({ img, name, desc, price, link = "" }) {
     </div>
   );
 }
+

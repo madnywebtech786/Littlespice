@@ -1,13 +1,13 @@
 .slide1Bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
-      url('/images/slide1.webp');
+      url('/images/slider/slider1.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   .slide2Bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
-      url('/images/Enchanting.webp');
+      url('/images/slider/slider2.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@
  
   .slide3Bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
-      url('/images/Coordination.webp');
+      url('/images/slider/slider3.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@
  
   .slide4Bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
-      url('/images/Celebration.webp');
+      url('/images/slider/slider4.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
