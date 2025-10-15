@@ -16,7 +16,7 @@ export const menuItems = [
     img: "/images/menu/starter/veg-samosa.png",
     category: "Starters",
   },
-   {
+  {
     id: 3,
     name: "Samosa Chat",
     desc: "Samosa with chickpeas",
@@ -24,7 +24,7 @@ export const menuItems = [
     img: "/images/menu/starter/samosa-chaat.png",
     category: "Starters",
   },
-   {
+  {
     id: 4,
     name: "Papri Chaat",
     desc: "Wheat wafers topped with potatoes, onion, yogurt sauce",
@@ -64,7 +64,7 @@ export const menuItems = [
     img: "/images/menu/starter/fish-pakora.png",
     category: "Starters",
   },
-   // VEG CURRY PLATERS
+  // VEG CURRY PLATTERS
   {
     id: 9,
     name: "Aloo Ghobi",
@@ -81,7 +81,7 @@ export const menuItems = [
     img: "/images/menu/vegcurry/channa-masala.png",
     category: "Veg. Curry Platters",
   },
-   {
+  {
     id: 11,
     name: "Palak Paneer",
     desc: "Spinach and cheese",
@@ -106,7 +106,7 @@ export const menuItems = [
     img: "/images/menu/chicken-curry/butter-chicken.png",
     category: "Chicken Curry Platters",
   },
-   {
+  {
     id: 14,
     name: "Chicken Tikka Masala",
     desc: "Cooked in tomato gravy with cream",
@@ -114,7 +114,7 @@ export const menuItems = [
     img: "/images/menu/chicken-curry/chicken-tikka.png",
     category: "Chicken Curry Platters",
   },
-   {
+  {
     id: 15,
     name: "Chicken Vindaloo",
     desc: "Chicken Potato curry",
@@ -163,7 +163,7 @@ export const menuItems = [
     img: "/images/menu/lambcurry/nihari.png",
     category: "Lamb & Beef Curry Platters",
   },
-  //Biryani
+  // BIRYANI
   {
     id: 21,
     name: "Chicken Biryani",
@@ -180,8 +180,7 @@ export const menuItems = [
     img: "/images/menu/biryani/lamb-biryani.png",
     category: "Biryani",
   },
-
-  //POUTIENE
+  // POUTINE
   {
     id: 23,
     name: "Chicken Poutein",
@@ -198,7 +197,7 @@ export const menuItems = [
     img: "/images/featurefood/poutiene.png",
     category: "Poutiene",
   },
-  //BBQ PLATTER
+  // BBQ PLATTER
   {
     id: 25,
     name: "Chicken Tikka Platter",
@@ -216,7 +215,7 @@ export const menuItems = [
     category: "BBQ Platter",
   },
   {
-    id: 25,
+    id: 27,
     name: "Beef Tikka Platter",
     desc: "Beef Tikka Platter",
     price: "$22.95",
@@ -224,7 +223,7 @@ export const menuItems = [
     category: "BBQ Platter",
   },
   {
-    id: 25,
+    id: 28,
     name: "Lamb Tikka Platter",
     desc: "Lamb Tikka Platter",
     price: "$22.95",
@@ -232,7 +231,7 @@ export const menuItems = [
     category: "BBQ Platter",
   },
   {
-    id: 25,
+    id: 29,
     name: "Fish Tikka Platter",
     desc: "Fish Tikka Platter",
     price: "$22.95",
@@ -240,7 +239,7 @@ export const menuItems = [
     category: "BBQ Platter",
   },
   {
-    id: 25,
+    id: 30,
     name: "Chapali Kebab",
     desc: "Chapali Kebab",
     price: "$22.95",
@@ -248,7 +247,7 @@ export const menuItems = [
     category: "BBQ Platter",
   },
   {
-    id: 25,
+    id: 31,
     name: "Chicken Kebab Platter",
     desc: "Chicken Kebab Platter",
     price: "$22.95",
@@ -256,7 +255,7 @@ export const menuItems = [
     category: "BBQ Platter",
   },
   {
-    id: 25,
+    id: 32,
     name: "Beef Kebab Platter",
     desc: "Beef Kebab Platter",
     price: "$21.95",
@@ -264,7 +263,7 @@ export const menuItems = [
     category: "BBQ Platter",
   },
   {
-    id: 25,
+    id: 33,
     name: "Tandoori Chicken",
     desc: "Tandoori Chicken",
     price: "$21.95",
@@ -272,40 +271,40 @@ export const menuItems = [
     category: "BBQ Platter",
   },
   {
-    id: 25,
-    name: "Mix Platter ",
+    id: 34,
+    name: "Mix Platter 1",
     desc: "Chicken Kebba+Malai Chicken",
     price: "$23.95",
     img: "/images/menu/bbq/mix-platter1.png",
     category: "BBQ Platter",
   },
   {
-    id: 25,
-    name: "Mix Platter",
+    id: 35,
+    name: "Mix Platter 2",
     desc: "Chicken/Malai Tikka",
     price: "$23.95",
     img: "/images/menu/bbq/mix-platter2.png",
     category: "BBQ Platter",
   },
   {
-    id: 25,
-    name: "Mix Platter",
+    id: 36,
+    name: "Mix Platter 3",
     desc: "Chicken Tikka/Beef Kebab",
     price: "$23.95",
     img: "/images/menu/bbq/mix-platter3.png",
     category: "BBQ Platter",
   },
   {
-    id: 25,
+    id: 37,
     name: "Lamb Chops Platter",
     desc: "Lamb Chops Platter",
     price: "$29.95",
     img: "/images/menu/gulab-jamun.png",
     category: "/images/menu/bbq/lamb-chops.png",
   },
- //DESSERT 
- {
-    id: 25,
+  // DESSERT
+  {
+    id: 38,
     name: "Kheer",
     desc: "Kheer",
     price: "$5.95",
@@ -313,7 +312,7 @@ export const menuItems = [
     category: "Dessert",
   },
   {
-    id: 25,
+    id: 39,
     name: "Falooda Rabri",
     desc: "Falooda Rabri",
     price: "$10.95",
@@ -321,16 +320,16 @@ export const menuItems = [
     category: "Dessert",
   },
   {
-    id: 25,
+    id: 40,
     name: "Gulab Jamun",
     desc: "Gulab Jamun",
     price: "$4.95",
     img: "/images/menu/gulab-jamun.png",
     category: "Dessert",
   },
-  //SIDE DISHES
+  // SIDE DISHES
   {
-    id: 26,
+    id: 41,
     name: "Aloo Ghobi",
     desc: "A flavorful curry made with tender potatoes and cauliflower simmered in aromatic spices.",
     price: "$14.95",
@@ -338,7 +337,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 27,
+    id: 42,
     name: "Chana Masala",
     desc: "A hearty chickpea curry simmered in a rich, spiced tomato gravy.",
     price: "$14.95",
@@ -346,7 +345,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 28,
+    id: 43,
     name: "Palak Paneer",
     desc: "Creamy spinach curry cooked with soft cubes of paneer and aromatic spices.",
     price: "$15.95",
@@ -354,7 +353,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 29,
+    id: 44,
     name: "Daal Makhni",
     desc: "A rich and creamy lentil curry slow-cooked with butter, cream, and aromatic spices.",
     price: "$15.95",
@@ -362,7 +361,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 30,
+    id: 45,
     name: "Butter Chicken",
     desc: "Tender chicken simmered in a creamy, buttery tomato sauce with aromatic spices.",
     price: "$16.95",
@@ -370,7 +369,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 31,
+    id: 46,
     name: "Chicken Tikka Masala",
     desc: "Grilled chicken pieces cooked in a rich, spiced tomato and cream sauce.",
     price: "$16.95",
@@ -378,7 +377,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 32,
+    id: 47,
     name: "Chicken Vindaloo",
     desc: "Tender chicken cooked in a spicy, tangy sauce with bold, flavorful spices.",
     price: "$16.95",
@@ -386,7 +385,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 33,
+    id: 48,
     name: "Chicken Qorma",
     desc: "Succulent chicken simmered in a rich, creamy gravy flavored with aromatic spices and herbs.",
     price: "$17.95",
@@ -394,7 +393,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 34,
+    id: 49,
     name: "Lamb Vindaloo",
     desc: "Gulab Jamun",
     price: "$18.95",
@@ -402,7 +401,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 35,
+    id: 50,
     name: "Lamb Qorma",
     desc: "Tender lamb cooked in a fiery, tangy sauce bursting with bold spices.",
     price: "$18.95",
@@ -410,7 +409,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 36,
+    id: 51,
     name: "Haleem",
     desc: "A slow-cooked delicacy made with wheat, lentils, and meat blended into a rich, flavorful porridge.",
     price: "$16.95",
@@ -418,7 +417,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 37,
+    id: 52,
     name: "Nihari",
     desc: "A slow-cooked stew made with tender meat and aromatic spices for a rich, hearty flavor.",
     price: "$16.95",
@@ -426,7 +425,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 38,
+    id: 53,
     name: "Naan",
     desc: "Soft and fluffy oven-baked bread brushed with butter for a perfect side to any curry.",
     price: "$1.95",
@@ -434,7 +433,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 39,
+    id: 54,
     name: "Garlic Naan",
     desc: "Soft, buttery naan infused with fresh garlic and herbs for extra flavor.",
     price: "$2.95",
@@ -442,7 +441,7 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 40,
+    id: 55,
     name: "Rice",
     desc: "Steamed basmati rice cooked to perfection for a light and fluffy texture.",
     price: "$3.95",
@@ -450,69 +449,64 @@ export const menuItems = [
     category: "Side Dishes",
   },
   {
-    id: 41,
+    id: 56,
     name: "Fries",
     desc: "Crispy golden fries served hot and perfectly seasoned.",
     price: "$6.95",
     img: "/images/menu/side-dishes/fries.png",
     category: "Side Dishes",
   },
-  //BBQ SIDES
+  // BBQ SIDES
   {
-    id: 42,
+    id: 57,
     name: "Chicken Tikka",
     desc: "Juicy, marinated chicken grilled to perfection with smoky, flavorful spices.",
     price: "$13.95",
     img: "/images/menu/bbq-side/chicken-tikka.png",
     category: "BBQ Side Dishes",
   },
-    {
-    id: 43,
+  {
+    id: 58,
     name: "Afgani Tikka",
     desc: "Tender, creamy chicken tikka marinated in mild spices and grilled to smoky perfection.",
     price: "$13.95",
     img: "/images/menu/bbq-side/afgani-tikka.png",
     category: "BBQ Side Dishes",
   },
-
-    {
-    id: 44,
+  {
+    id: 59,
     name: "Beef Tikka",
     desc: "Juicy beef pieces marinated in aromatic spices and grilled to smoky perfection.",
     price: "$13.95",
     img: "/images/menu/bbq-side/beef-tikka.png",
     category: "BBQ Side Dishes",
   },
-
-    {
-    id: 45,
+  {
+    id: 60,
     name: "Lamb Tikka",
     desc: "Tender lamb pieces marinated in spices and grilled to smoky, flavorful perfection.",
     price: "$15.95",
     img: "/images/menu/bbq-side/beef-tikka.png",
     category: "BBQ Side Dishes",
   },
-
-    {
-    id: 46,
+  {
+    id: 61,
     name: "Fish Tikka",
     desc: "Flaky fish marinated in spices and grilled to a smoky, flavorful finish.",
     price: "$15.95",
     img: "/images/menu/bbq-side/fish-tikka.png",
     category: "BBQ Side Dishes",
   },
-
-    {
-    id: 47,
+  {
+    id: 62,
     name: "Chicken Kebab",
     desc: "Juicy, spiced chicken pieces skewered and grilled to perfection.",
     price: "$13.95",
     img: "/images/menu/bbq-side/chicken-kebab.png",
     category: "DBBQ Side Dishes",
   },
-
-    {
-    id: 48,
+  {
+    id: 63,
     name: "Beef Kebab",
     desc: "Tender beef pieces marinated in spices and grilled to smoky perfection.",
     price: "$13.95",
@@ -520,49 +514,49 @@ export const menuItems = [
     category: "BBQ Side Dishes",
   },
   {
-    id: 49,
+    id: 64,
     name: "Tandoori Chicken",
     desc: "Juicy chicken marinated in spices and yogurt, roasted to smoky perfection in a tandoor.",
     price: "$14.95",
     img: "/images/menu/bbq-side/tandoori-chicken.png",
     category: "BBQ Side Dishes",
   },
-  //HOT DRINKS
-   {
-    id: 50,
+  // HOT DRINKS
+  {
+    id: 65,
     name: "Karak Chai",
     desc: "Rich, creamy, and spiced tea brewed to perfection for a bold, comforting flavor.",
     price: "$2.95",
     img: "/images/menu/karak-tea.png",
     category: "Hot Drinks",
   },
-   {
-    id: 51,
+  {
+    id: 66,
     name: "Black Tea",
     desc: "Strong and aromatic black tea brewed for a classic, bold flavor.",
     price: "$2.95",
     img: "/images/menu/drinks/black-tea.png",
     category: "Hot Drinks",
   },
-   {
-    id: 52,
+  {
+    id: 67,
     name: "Jasmine Tea",
     desc: "Delicately fragrant tea infused with the subtle aroma of jasmine flowers.",
     price: "$2.95",
     img: "/images/menu/drinks/jasmine-tea.png",
     category: "Hot Drinks",
   },
-   {
-    id: 53,
+  {
+    id: 68,
     name: "Green Tea",
     desc: "Light and refreshing tea made from tender green leaves, offering a soothing flavor.",
     price: "$2.95",
     img: "/images/menu/drinks/green-tea.png",
     category: "Hot Drinks",
   },
-  //DRINKS
-{
-    id: 53,
+  // DRINKS
+  {
+    id: 69,
     name: "Mango Lassi",
     desc: "Refreshing yogurt drink blended with sweet, ripe mangoes for a creamy treat.",
     price: "$7.95",
@@ -570,7 +564,7 @@ export const menuItems = [
     category: "Drinks",
   },
   {
-    id: 53,
+    id: 70,
     name: "Sweet Lassi",
     desc: "Creamy yogurt drink lightly sweetened for a smooth and refreshing taste.",
     price: "$7.95",
@@ -578,7 +572,7 @@ export const menuItems = [
     category: "Drinks",
   },
   {
-    id: 53,
+    id: 71,
     name: "Salted Lassi",
     desc: "Refreshing yogurt drink with a hint of salt for a savory twist.",
     price: "$7.95",
@@ -586,7 +580,7 @@ export const menuItems = [
     category: "Drinks",
   },
   {
-    id: 53,
+    id: 72,
     name: "Mango Shake",
     desc: "Creamy and sweet shake made with ripe mangoes and chilled milk.",
     price: "$7.95",
@@ -594,7 +588,7 @@ export const menuItems = [
     category: "Drinks",
   },
   {
-    id: 53,
+    id: 73,
     name: "Strawberry Shake",
     desc: "Smooth and creamy shake blended with fresh, sweet strawberries.",
     price: "$7.95",
@@ -602,7 +596,7 @@ export const menuItems = [
     category: "Drinks",
   },
   {
-    id: 53,
+    id: 74,
     name: "Chocolate Shake",
     desc: "Rich and creamy shake made with chocolate and chilled milk for a decadent treat.",
     price: "$7.95",
@@ -610,24 +604,23 @@ export const menuItems = [
     category: "Drinks",
   },
   {
-    id: 53,
+    id: 75,
     name: "Pistacho Shake",
     desc: "Creamy and nutty shake made with pistachios for a rich, flavorful treat.",
     price: "$7.95",
     img: "/images/menu/drinks/pistacho-shake.png",
     category: "Drinks",
   },
-   {
-    id: 53,
+  {
+    id: 76,
     name: "Almond Shake",
     desc: "Smooth and creamy shake blended with rich, nutty almonds.",
     price: "$7.95",
     img: "/images/menu/drinks/almond-shake.png",
     category: "Drinks",
   },
-
-
 ];
+
 
 export const categories = [
   "All",

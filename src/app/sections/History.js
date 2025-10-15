@@ -67,7 +67,7 @@ const HistorySection = () => {
               <p className="max-w-xs text-gray-300">{item.description}</p>
               <div className="mt-8">
                 <Image
-                  unoptimized
+                 loading="lazy"
                   src={item.imageUrl}
                   alt={item.title}
                   width={210}

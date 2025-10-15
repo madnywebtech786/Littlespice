@@ -101,11 +101,11 @@ const FoodCategories = () => {
             </h2>
             <div className="flex justify-center mt-1">
               <Image
-                unoptimized
                 src="/images/divider.svg"
                 alt="title shape"
                 width={304}
                 height={10}
+                 loading="lazy"
               />
             </div>
           </div>
@@ -155,11 +155,11 @@ const FoodCategories = () => {
                 >
                   <div className="relative w-[171px] h-[171px] mx-auto">
                     <Image
-                      unoptimized
                       src={category.image}
                       alt={category.name}
                       width={171}
                       height={171}
+                       loading="lazy"
                       className="relative z-10 w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
@@ -172,11 +172,11 @@ const FoodCategories = () => {
                 </a>
               </div>
               <Image
-                unoptimized
                 src={shadowImg}
                 alt=""
                 width={420}
                 height={300}
+                 loading="lazy"
                 className="w-full mx-auto z-10 absolute top-9/12 left-0 "
               />
             </SwiperSlide>

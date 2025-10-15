@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Breadcrumb from "../components/Breadcrumb";
 import Image from "next/image";
 import "swiper/css";
@@ -7,14 +7,40 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import MenuItemCard from "../components/MenuItemCard";
 import { categories, menuItems } from "../data/menuData";
+import Loader from "../components/Loader";
+
 
 export default function page() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [isLoading, setIsLoading] = useState(false);
+  const timeoutRef = useRef(null);
 
   const filteredItems =
     activeCategory === "All"
       ? menuItems
       : menuItems.filter((item) => item.category === activeCategory);
+
+  console.log(activeCategory, filteredItems);
+
+  useEffect(() => {
+    // show loader for 1.5s whenever category changes
+    setIsLoading(true);
+    // clear previous timeout if any
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = window.setTimeout(() => {
+      setIsLoading(false);
+      timeoutRef.current = null;
+    }, 1500);
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    };
+  }, [activeCategory]);
 
   return (
     <div>
@@ -26,7 +52,7 @@ export default function page() {
               Our <span className="text-primary-red"> Foods</span> Menu Card
             </h2>
             <Image
-              unoptimized
+             loading="lazy"
               src="/images/divider.svg"
               alt="Title shape"
               width={304}
@@ -65,11 +91,20 @@ export default function page() {
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 auto-rows-fr">
-          {filteredItems.map((item, index) => (
-            <MenuItemCard key={item.id ?? index} {...item} />
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="flex justify-center items-center py-12">
+            <Loader />
+          </div>
+        ) : (
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 auto-rows-fr">
+            {filteredItems.map((item, index) => (
+              <MenuItemCard
+                key={item.id ?? item.name ?? `${activeCategory}-${index}`}
+                {...item}
+              />
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );

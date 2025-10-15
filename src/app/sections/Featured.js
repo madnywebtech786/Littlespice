@@ -42,11 +42,11 @@ const FoodCard = ({ item }) => (
   <div className="py-10 section-shape bg-white hover:bg-primary-red group rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.07)] overflow-hidden text-center transition-all duration-300 hover:shadow-[0_10px_40px_rgba(0,0,0,0.1)] hover:-translate-y-2">
     <div className="relative overflow-hidden">
       <Image
-        unoptimized
         src={item.imageSrc}
         alt={item.title}
         width={200}
         height={200}
+         loading="lazy"
         className="w-full max-w-[250px] mx-auto h-auto object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
       />
       <Link
@@ -83,12 +83,12 @@ export default function FeaturedFoods() {
           </h2>
           <div className="flex justify-center mt-4">
             <Image
-              unoptimized
               src="/images/divider.svg"
               alt="title shape"
               width={304}
               height={10}
               className="w-auto h-auto"
+               loading="lazy"
             />
           </div>
         </div>

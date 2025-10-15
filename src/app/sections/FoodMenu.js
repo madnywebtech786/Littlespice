@@ -18,7 +18,7 @@ const features = [
 export default function MenuSection() {
   const [activeCategory, setActiveCategory] = useState("All");
 
- const filteredItems =
+  const filteredItems =
     activeCategory === "All"
       ? menuItems
       : menuItems.filter((item) => item.category === activeCategory);
@@ -38,6 +38,8 @@ export default function MenuSection() {
             width={304}
             height={10}
             className="mx-auto mt-4"
+            loading="lazy"
+            draggable={false}
           />
         </div>
         <div className="flex justify-center flex-wrap gap-3 md:gap-4 mb-8">
@@ -54,9 +56,8 @@ export default function MenuSection() {
             className="w-full lg:w-4/5 mx-auto"
           >
             {categories.map((category) => (
-              <SwiperSlide>
+              <SwiperSlide key={category}>
                 <button
-                  key={category}
                   onClick={() => setActiveCategory(category)}
                   className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 w-[90%] mx-auto my-4 ${
                     activeCategory === category
@@ -79,14 +80,20 @@ export default function MenuSection() {
               width={600}
               height={600}
               className="rounded-lg w-full h-[550px]"
+              loading="lazy"
+              draggable={false}
             />
           </aside>
 
           <main className="lg:col-span-8">
-            <div className="space-y-4 max-h-[560px] overflow-y-auto pr-4 custom-scrollbar">
-              {filteredItems.map((item) => (
+            <div
+              className="space-y-4 max-h-[560px] overflow-y-auto pr-4 custom-scrollbar"
+              // promote this scrolling container to its own layer to reduce jank
+              style={{ willChange: "transform", transform: "translateZ(0)" }}
+            >
+              {filteredItems.map((item, index) => (
                 <div
-                  key={item.id}
+                  key={item.id ?? `${item.name ?? "item"}-${index}`}
                   className="flex items-center gap-4 p-4 transition-all duration-300 hover:bg-white hover:shadow-lg rounded-xl"
                 >
                   <Image
@@ -95,6 +102,8 @@ export default function MenuSection() {
                     width={90}
                     height={90}
                     className="flex-shrink-0 rounded-full w-[70px] h-[70px] md:w-[90px] md:h-[90px] object-cover "
+                    loading="lazy"
+                    draggable={false}
                   />
                   <div className="flex-grow flex flex-col md:flex-row md:items-center">
                     <div className="flex-grow">

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay,Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 const galleryImages = [
   {
@@ -141,8 +141,8 @@ const CloseIcon = (props) => (
 );
 
 const FoodGallery = () => {
-     const prevRef = useRef(null);
-    const nextRef = useRef(null);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
 
   return (
     <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 bg-white overflow-hidden">
@@ -156,7 +156,7 @@ const FoodGallery = () => {
               Where Every Bite Is a Burst of Flavor
             </h2>
             <Image
-              unoptimized
+             loading="lazy"
               src="/images/divider.svg"
               alt="title shape"
               width={200}
@@ -182,7 +182,7 @@ const FoodGallery = () => {
           </div>
         </div>
         <Swiper
-          slidesPerView={5}
+          slidesPerView={1}
           spaceBetween={10}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           modules={[Autoplay, Navigation]}
@@ -195,6 +195,11 @@ const FoodGallery = () => {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
           }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 3 },
+            1240: { slidesPerView: 5 },
+          }}
         >
           {galleryImages.map((item, index) => (
             <SwiperSlide>
@@ -205,16 +210,8 @@ const FoodGallery = () => {
                   role="button"
                   aria-label={`View image ${index + 1} in lightbox`}
                 >
-                  {/* <Image
-                    unoptimized
-                    src={item.src}
-                    alt={`Food gallery image ${index + 1}`}
-                    width={270}
-                    height={270}
-                    className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-300"
-                  /> */}
                   <Image
-                    unoptimized
+                   loading="lazy"
                     src={item.src}
                     alt={`Food gallery image ${index + 1}`}
                     width={320}

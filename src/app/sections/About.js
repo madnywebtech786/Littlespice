@@ -23,11 +23,11 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div className="relative">
             <Image
-              unoptimized
               src="/images/about-side.png"
               alt="A delicious-looking plate of fast food including a burger and fries"
               width={590}
               height={580}
+               loading="lazy"
               className="w-full h-auto rounded-lg relative z-10"
             />
     
