@@ -75,7 +75,7 @@ export default function MenuSection() {
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           <aside className="lg:col-span-4 space-y-8 hidden lg:block">
             <Image
-              src="/images/menu-side.png"
+              src="/images/menu-side.webp"
               alt="Assorted food items"
               width={600}
               height={600}
