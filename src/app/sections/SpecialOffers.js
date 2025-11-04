@@ -90,7 +90,7 @@ const SpecialOffer = () => {
         alt="offer shape"
         width={500}
         height={400}
-        className="w-4/5 sm:h-auto hidden lg:absolute top-10 -left-1/2 "
+        className="w-4/5 sm:h-auto hidden lg:block absolute top-10 -left-1/2 "
       />
 
       <Image
@@ -99,7 +99,7 @@ const SpecialOffer = () => {
         alt="Super Delicious Burger"
         width={700}
         height={695}
-        className="w-5/6 h-auto hidden lg:absolute top-0 -right-1/2 "
+        className="w-5/6 h-auto hidden lg:block absolute top-0 -right-1/2 "
       />
     </section>
   );
