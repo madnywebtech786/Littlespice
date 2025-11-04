@@ -11,13 +11,13 @@ const AboutSection = () => {
   return (
     <section className="bg-white py-16 px-4 sm:px-8 md:px-12 lg:px-20 relative overflow-hidden">
       <Image
-        unoptimized
-        src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/about-shape-1.1.png"
+        src="/images/about-shape.webp"
         alt="Decorative Shape"
         width={122}
         height={125}
-        className="absolute top-[15%] right-0 w-20 h-auto lg:w-auto lg:h-auto hidden md:block"
+        className="absolute top-[13%] right-0 w-20 h-20 lg:w-40 lg:h-40 hidden md:block"
         aria-hidden="true"
+        loading="lazy"
       />
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">

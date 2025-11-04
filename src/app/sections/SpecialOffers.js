@@ -85,23 +85,22 @@ const SpecialOffer = () => {
         </div>
       </div>
       <Image
-        unoptimized
-        src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/coming-left-1.png"
+        loading="lazy"
+        src="/images/coming-left.webp"
         alt="offer shape"
-        width={323}
-        height={83}
-        className="w-4/5 sm:h-auto absolute top-10 -left-1/2"
+        width={500}
+        height={400}
+        className="w-4/5 sm:h-auto hidden lg:absolute top-10 -left-1/2 "
       />
 
       <Image
-        unoptimized
-        src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/coming-right.png"
+        loading="lazy"
+        src="/images/coming-right.webp"
         alt="Super Delicious Burger"
         width={700}
         height={695}
-        className="w-4/5 h-auto absolute top-10 -right-1/2"
+        className="w-5/6 h-auto hidden lg:absolute top-0 -right-1/2 "
       />
-  
     </section>
   );
 };

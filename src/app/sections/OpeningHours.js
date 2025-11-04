@@ -39,15 +39,6 @@ const OpeningHours = () => {
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-dark-text sm:text-4xl">
               Our Opening Hours
             </h2>
-            <div className="mt-4">
-              <Image
-                unoptimized
-                src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/title-shape2.png"
-                alt="decorative shape"
-                width={105}
-                height={13}
-              />
-            </div>
 
             <div className="mt-12">
               {scheduleData.map((item, index) => (

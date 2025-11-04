@@ -5,41 +5,31 @@ import Image from "next/image";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
     image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/testi-1-1.png",
+      "/images/t1.webp",
     quote:
       "“Absolutely love Little Spice! The flavors are incredible — everything tastes fresh and authentic. Their butter chicken and biryani remind me of home. The new look after renovation is amazing too!”",
     name: "Victoria Wotton",
   },
   {
     image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/testi-1-2.png",
+      "/images/t2.webp",
     quote:
       "“We stopped by Little Spice for lunch and were blown away! The food came out hot, flavorful, and perfectly spiced. The staff were super friendly and welcoming. Easily one of Calgary’s best Indian and Pakistani restaurants.”",
     name: "Emma Mia",
   },
   {
     image:
-      "https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/testi-1-1.png",
+      "/images/t3.webp",
     quote:
       "“Little Spice never disappoints! From the juicy kebabs to the crispy samosas, every dish is packed with flavor. The renovated space feels cozy and modern — perfect for family dinners or takeout nights.”",
     name: "Alex Johnson",
   },
 ];
-
-const QuoteIcon = () => (
-  <Image
-    unoptimized
-    src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/testi-1-quote.png"
-    alt="Quote icon"
-    width={60}
-    height={46}
-    className="absolute -top-5 -left-5 w-12 h-auto md:w-10"
-  />
-);
 
 export default function Testimonials() {
   const [api, setApi] = useState();
@@ -64,7 +54,6 @@ export default function Testimonials() {
   return (
     <section className="relative bg-white py-20 lg:py-28 overflow-hidden">
       <Image
-        unoptimized
         src="/images/menu/gobi-pakora.png"
         alt="Decorative Shape"
         width={193}
@@ -72,7 +61,6 @@ export default function Testimonials() {
         className="absolute top-1/2 right-10 hidden lg:block"
       />
       <Image
-        unoptimized
         src="/images/menu/papri-chat.png"
         alt="Decorative Shape"
         width={196}
@@ -97,7 +85,6 @@ export default function Testimonials() {
             Our <span className="text-primary-red"> Happy  </span> Customers Feedback
           </h2>
           <Image
-            unoptimized
             src="/images/divider.svg"
             alt="Title Shape"
             width={304}
@@ -119,7 +106,6 @@ export default function Testimonials() {
                 <div className="relative bg-white shadow-lg rounded-xl mt-16 max-w-2xl mx-auto p-8 pt-20 text-center">
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <Image
-                      unoptimized
                       src={testimonial.image}
                       alt={testimonial.name}
                       width={120}
@@ -128,7 +114,7 @@ export default function Testimonials() {
                     />
                   </div>
                   <div className="relative pt-6">
-                    <QuoteIcon />
+                    <Quote className="text-primary-red" size={25} />
                     <p className="text-lg text-gray-text italic max-w-lg mx-auto">
                       {testimonial.quote}
                     </p>

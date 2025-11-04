@@ -45,14 +45,6 @@ const HistorySection = () => {
           <h2 className="mt-2 text-4xl font-bold text-white md:text-5xl">
             A <span className="text-primary-red">  History</span> of restaurant
           </h2>
-          <Image
-            unoptimized
-            src="https://wordpress.themehour.net/barab/wp-content/uploads/2025/07/title-shape2.png"
-            alt="title shape"
-            width={188}
-            height={12}
-            className="mx-auto mt-4"
-          />
         </div>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3 lg:gap-16">
