@@ -7,7 +7,7 @@ import FeaturedFoods from "./sections/Featured";
 import HistorySection from "./sections/History";
 import MenuSection from "./sections/FoodMenu";
 import FoodGallery from "./sections/FoodGallery";
-import SpecialOffer from "./sections/SpecialOffers";
+import Offers from "./sections/Offers";
 // import ChefTeam from "./sections/Chefs";
 import OpeningHours from "./sections/OpeningHours";
 import Testimonials from "./sections/Testimonials";
@@ -19,12 +19,12 @@ export default function Home() {
     <>
       <HeroSection />
       <FoodCategories />
+      <Offers />
       <AboutSection />
       <FeaturedFoods />
       <HistorySection />
       <MenuSection />
       <FoodGallery />
-      <SpecialOffer />
       {/* <ChefTeam /> */}
       <OpeningHours />
       <Testimonials />

@@ -11,17 +11,20 @@ const galleryImages = [
   {
     src: "/images/gallery/IMG_3447.webp",
   },
+  { src: "/images/offers/offer1.webp" },
   {
     src: "/images/gallery/IMG_3450.webp",
   },
+  { src: "/images/offers/offer2.webp" },
   {
     src: "/images/gallery/IMG_3453.webp",
   },
-  {
-    src: "/images/gallery/IMG_3456.webp",
-  },
+
   {
     src: "/images/gallery/IMG_3484.webp",
+  },
+  {
+    src: "/images/gallery/IMG_3456.webp",
   },
   {
     src: "/images/gallery/IMG_3491.webp",
@@ -30,8 +33,14 @@ const galleryImages = [
     src: "/images/gallery/IMG_3492.webp",
   },
   {
+    src: "/images/gallery/IMG_3498.webp",
+  },
+
+  {
     src: "/images/gallery/IMG_3497.webp",
   },
+
+  { src: "/images/offers/offer3.webp" },
 ];
 
 const ArrowLeftIcon = (props) => (
@@ -156,7 +165,7 @@ const FoodGallery = () => {
               Where Every Bite Is a Burst of Flavor
             </h2>
             <Image
-             loading="lazy"
+              loading="lazy"
               src="/images/divider.svg"
               alt="title shape"
               width={200}
@@ -211,7 +220,7 @@ const FoodGallery = () => {
                   aria-label={`View image ${index + 1} in lightbox`}
                 >
                   <Image
-                   loading="lazy"
+                    loading="lazy"
                     src={item.src}
                     alt={`Food gallery image ${index + 1}`}
                     width={320}
