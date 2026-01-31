@@ -96,22 +96,14 @@ export default function MenuSection() {
                   key={item.id ?? `${item.name ?? "item"}-${index}`}
                   className="flex items-center gap-4 p-4 transition-all duration-300 hover:bg-white hover:shadow-lg rounded-xl"
                 >
-                  <Image
-                    src={item.img}
-                    alt={item.name}
-                    width={90}
-                    height={90}
-                    className="flex-shrink-0 rounded-full w-[70px] h-[70px] md:w-[90px] md:h-[90px] object-cover "
-                    loading="lazy"
-                    draggable={false}
-                  />
+             
                   <div className="flex-grow flex flex-col md:flex-row md:items-center">
                     <div className="flex-grow">
                       <h3 className="text-lg md:text-xl font-bold text-dark-text hover:text-primary-red transition-colors duration-300 cursor-pointer">
                         {item.name}
                       </h3>
                       <p className="text-gray-text text-sm mt-1 max-w-xs">
-                        {item.description}
+                        {item.desc}
                       </p>
                     </div>
                     <span className="hidden md:inline-block flex-grow border-b-2 border-dotted border-primary-red mx-4 "></span>

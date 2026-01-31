@@ -6,7 +6,7 @@ export default function MenuItemCard({ img, name, desc, price, link = "" }) {
     /* root set to full-height so grid cells can make every card same height */
     <div className="w-full h-full group">
       <div className="relative h-full flex flex-col">
-        <div className="shape-mask bg-[#fff3d6] shadow-2xl mask-container w-[300px] h-[300px] flex items-center justify-center relative flex-none">
+        <div className="shape-mask bg-[#fff3d6] shadow-2xl mask-container w-full h-[300px] flex items-center justify-center relative flex-none">
           <Image
             loading="lazy"
             src={img}
